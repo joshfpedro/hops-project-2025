@@ -55,11 +55,11 @@ Motivated by this pathosystem, we draw upon an exceptional rich data set collect
 
 ## Material and Methods
 
-### Study System
+### Study system
 
 Our study system is the hop production region in western Oregon. Oregon is one of the leading hop producing regions in the U.S. and commercial production is concentrated in a few counties in the Willamette Valley in the western portion of the state. Hop powdery mildew was first confirmed in the field in Oregon in 1998 and has occurred annually each year since then. Historically, powdery mildew has tended to occur most regularly and most severely in production regions in the eastern extent of the Willamette Valley, presumably due to the frequency of overwintered inoculum and subsequent dispersal from the resultant disease foci [[6]](#Mahaffee2016). We intentionally focused on hop farms in the eastern production regions for data acquisition. The diversity of cultivars and production practices in this region are summarized elsewhere [[7]](#Thompson2016).
 
-### Biological Data Acquisition
+### Biological data acquisition
 
 We obtained monthly data on the incidence of plants with powdery mildew or primary infection (i.e., occurrence of a flag shoot) from a census survey of hop yards. Disease assessments were conducted monthly from April to July during each of 2014 to 2017. For brevity, a summary of the disease assessments methods is provided here; a complete description of the methods are given in the referenced work [[8]](#Bassanezi2013). There were 8 to 10 farms sampled per year, all within Marion County, Oregon, with a maximum distance between yards of 26 km. After cleaning, data were available for 99 yards assessed in 2014, 113 in 2015, 116 in 2016, and 122 in 2017. All cultivars were evaluated, independent of their susceptibility to powdery mildew. The incidence of plants with powdery mildew was assessed using a modification of cluster sampling methods described previously [[9]](#Filho2016).
 
@@ -67,11 +67,11 @@ As noted previously, there are multiple pathogenic strains of *P. macularis* tha
 
 When we detected powdery mildew in a given hop yard it was necessary to match the strain of the pathogen present to potential yards where the pathogen could disperse to cause disease. Therefore, the initial strain of the pathogen present was determined to be V6-virulent or non-V6-virulent using bioassays as described previously.
 
-### Pesticide Use and Costs
+### Pesticide use and costs
 
 We obtained pesticide application records from each grower for all yards sampled during 2014 to 2017 and interrogated their records to determine the timing and dosage of applications of herbicides, fungicides with activity against powdery mildew, and adjuvant additives. Herbicides were of relevance because they are used in cultural practices to moderate powdery mildew [cite https://doi.org/10.1094/PDIS-10-15-1232-RE and https://doi.org/10.1094/PHYTO-04-18-0127-R and https://doi.org/10.1094/PDIS-01-12-0084-RE]. We did not consider insecticides or miticides because these were not directly relevant for the present analysis of powdery mildew. We then estimated the January 2022 real costs of the relevant pesticides and adjuvants applied by requesting price quotes for each product from each of three vendors in western Oregon that service hop producers as described in the referenced work. We estimated real prices using January 2022 as the base by adjusting the nominal price by the producer price index for farm products for each year available from the U.S. Bureau of Labor Statistics, and then averaged over all available years to derive a single real price per unit.
 
-### General Modeling Approach
+### General modeling approach
 
 We introduce a linked epidemiological-economic statistical model of epidemic development and apply this model to hop powdery mildew to simulate economic outcomes due to disease management costs and crop damage from direct losses in yield and quality defects. The epidemic model contains both stochastic and deterministic components to estimate development of the foliar phase of powdery mildew originating from initial occurrences of *P. macularis* via bud perennation, autoinfection at the scale of individual hop yards from inoculum endogenous to a given yard, and exogenous inoculum dispersed from other yards in the region. The population moment estimate of the incidence of plants with powdery mildew is derived from a function of the probability of plant being diseased, as moderated by fungicide use. Profits are the summation of revenue and fixed and variable costs as influenced by fungicide inputs, and yield and crop devaluation due to quality defects as a function of disease incidence. External drivers are inputs of wind data, fungicide use, and initializing values of the probability of initial (primary) infection due to bud perennation, expected crop yield in the absence of disease, and price per unit of yield. The model is spatially explicit at the scale of individual hop yards and uses the actual location and size of hop yards in the data set for a representative year; there is no attempt to account mechanistically for focus development or disease spread within hop yards.
 
@@ -79,7 +79,7 @@ We use the linked models to simulate profit levels resulting from the varying ep
 
 ### Submodels
 
-#### Epidemic Network Model
+#### Epidemic network model
 
 An individual hop yard is considered a node in a network of yards in the spatial extent of interest. Disease status of a yard in a given month is a nonlinear function of its disease incidence in the preceding month, susceptibility to two races of *P. macularis*, and disease spread from other nodes as influenced by their disease incidence and area (source strength), distance apart, and wind run in the preceding month. We expanded this model by introducing two parameters that moderate disease in a given hop yard and disease spread from other hop yards based on the number of fungicide applications made in the prior month. We also generalized the model by expressing the dispersal kernel as a function of distance and source strength to accommodate various functional forms. The impact of exogenous inoculum depends jointly on the pathogen virulence in the source yards and susceptibility of the cultivar planted in the target yard.
 
@@ -115,7 +115,7 @@ Covariates and parameter interpretations are given in Tables 1 and 2. Parameters
 | $\eta_1$ | Change in log-odds of disease associated with autoinfection at the yard scale, after accounting for fungicide sprays. |
 | $\eta_2$ | Dispersal parameter providing fungicide spray adjustment to change in log-odds of disease associated with individual source yards. |
 
-#### Economic Model
+#### Economic model
 
 The profit function $\Pi$ at time $t$ over the growing season ($t=0,...,T$) measures the total profit per hectare across all hop yards $i = 1 \ldots N$:
 
@@ -159,7 +159,7 @@ $$C_i(s_{i,t}) = C_F + C_V + \sum_{t=0}^T (C_{s,t} + C_{a,t})$$
 
 where $C_F$ is the fixed cost, $C_V$ represents other variable costs, $C_{s,t}$ is the fungicide cost, and $C_{a,t}$ is the application cost at period $t$. Fixed and other variables costs were obtained from Galinato (2020) (cite https://wpcdn.web.wsu.edu/wp-ecommerce/uploads/sites/2/product-3194-sku-TB38E.pdf).
 
-#### Parameter Estimation
+#### Parameter estimation
 
 The parameters in the epidemic network model were estimated using maximum likelihood. The likelihood function was constructed by assuming the number of diseased plants $Y_i$ in each yard $i$ follows a binomial distribution with probability $p_i$ given by the inverse logit of $\eta_i$ in the equation above. The log-likelihood of the parameters $\boldsymbol{\theta} = (\beta, \delta, \gamma, \alpha, \eta_1, \eta_2)$ given the observed data $\mathcal{D} = {(y_i, n_i, \tilde{y}_i, n_{\tilde{y}_i}, a_i, s_i, {z_j, n_{z_j}, a_j, d_{ij}, w_{ij}, s_j})}$ where $i=1 \ldots N$ and $j=1 \ldots M_i$ is:
 
@@ -171,7 +171,7 @@ The maximum likelihood estimator $\hat{\boldsymbol{\theta}}$ was obtained by max
 
 All analyses were conducted in Python, making use of the NumPy, SciPy, and Statsmodels libraries for numerical computing and statistical modeling.
 
-## Simulation Experiments
+## Simulation experiments
 
 For the simulation experiments described below, we constructed a synthetic landscape using the actual locations and sizes of hop yards in each of the years 2014 to 2017 from our data set. Each hop yard was planted to one of four representative cultivars (Chinook, Simcoe®, Nugget, or Mosaic®), chosen because they were commercially relevant at the time of this research, either possessed or did not possess the R6 resistance, and can be sold for direct use in brewing or alternatively can be processed to extract alpha-acids as a secondary market. We assumed equal susceptibility to powdery mildew given a compatible strain of pathogen. Cultivar assignments were made at random for each yard, subject to a 1:1 ratio of cultivars that possess R6 or non-R6 in the entire landscape. The same yard-level assignments were used across simulation runs for a given year.
 
@@ -191,7 +191,7 @@ With these initial conditions set, we simulated disease progression through May,
 
 After simulating disease progress through the end of July, we computed the incidence of diseased cones using the relationship in Figure 1C. The economic model then used these incidence levels to estimate yield losses, potential quality reductions (via the cone-color model), and resulting net returns after accounting for fixed costs, variable costs, and the cost of sprays. We repeated these simulations for a range of $p_0$ values, different fractions of V6-virulent strains present in the initial inoculum, and different yard-level centralities at which the initial flag shoots occurred. For primary inoculum dose, we varied $p_0$ from 0.00001 to 0.01, a large but plausible range of primary infections levels. The proportion of initial infections caused by V6 or non-V6-virulent strains were varied from 0% to 100% in 25% steps. For degree centrality, we placed the primary inoculum in into each 20% quantile. Unless otherwise noted, each scenario was run 100 times to capture variability in binomial draws. We report either the mean or percentiles of the *relative* change in profit per hectare compared to a no-disease/no-spray baseline.
 
-### Summary of Simulation Parameters
+### Summary of simulation parameters
 
 Table 3 provides a concise overview of the key parameters we varied in the nested for-loops of our simulation experiments. For every combination of these parameter values, we ran the simulation for each of the four years (2014-2017) and for each of three market-demand scenarios (low, moderate, high).
 
@@ -235,11 +235,11 @@ To understand the temporal dynamics of the epidemic model, we compared the param
 
 The baseline log-odds of disease ($\beta_1$, $\beta_2$) were lower (more negative) in May-June (-2.06, -4.15) than in June-July (-2.79, -3.88), indicating a lower baseline risk of disease early in the season. The effect of autoinfection ($\delta_1$, $\delta_2$) was much larger in May--June (2074.35, 120.46) compared to June-July (2.94, 8.04), suggesting that local sources of inoculum are most influential at the start of the epidemic. The effect of dispersal from other yards ($\gamma_1$, $\gamma_2$) was also much greater in May-June (34358.91, 14536.03) than in June-July (1390.71, 286.8), highlighting the importance of regional spread early in the epidemic. The dispersal kernel parameters ($\alpha_1$, $\alpha_2$) were larger in June-July (1.0, 2.04) than in May-June (0.71, 2.67), indicating a possible shift in the spatial scale of dispersal as the season progresses. The fungicide effect parameters ($\eta_{11}$, $\eta_{12}$, $\eta_{21}$, $\eta_{22}$) were generally larger in May-June, especially $\eta_{11}$ (3.51 vs 0.02), suggesting that fungicide applications are more impactful on reducing disease early in the season versus later. Overall, these differences indicate that both local and regional sources of inoculum are most important in the early epidemic phase, and that fungicide applications have their greatest impact when applied earlier in the epidemic. As the season progresses, the epidemic becomes less sensitive to these factors.
 
-## Simulation Experiments
+## Simulation experiments
 
 The simulation results demonstrate a strong dependence of profitability on initial epidemic conditions, specifically highlighting the influence of initial inoculum dose, pathogen diversity, and the dispersal centrality of the initially infected yards on disease management strategies. We address each of these points in the sections that follow.
 
-### Impact of Initial Inoculum Dose
+### Impact of initial inoculum dose
 
 The initial probability of disease ($p_0$) emerged as a dominant factor influencing the profitability and efficacy of fungicide applications (call out heatmap figure here).
 
@@ -249,17 +249,17 @@ The initial probability of disease ($p_0$) emerged as a dominant factor influenc
 
 In contrast, applying 4-6 sprays in May minimized losses, with profit changes typically between -1% and -3%. For example, in the high demand scenario, at $p_0 = 0.01$, 0 sprays led to losses of -10% to -12% in the most central yards, while 5-6 sprays reduced losses to about -2% to -3%.
 
-### Effect of Pathogen Diversity
+### Effect of pathogen diversity
 
 Pathogen strain diversity also played an influential role, particularly in scenarios where the pathogen population included varying proportions of the V6-virulent strain capable of infecting a broader range of cultivars. As the proportion of the V6-virulent strain increased, the optimal number of fungicide sprays required to maximize profitability rose accordingly. When pathogen populations consisted predominantly or entirely of the V6-virulent strain, fungicide applications became increasingly essential to maintaining profitability. Thus, pathogen diversity directly affected both the necessity and frequency of fungicide interventions.
 
 Quantitatively, in the high demand scenario for $p_0 = 0.01$ and 100% V6, profit losses without spraying reached -10% to -12%, while 5-6 sprays reduced losses to -2% to -3%.
 
-### Influence of Degree-Centrality of Initial Inoculum
+### Influence of degree-centrality of initial inoculum
 
 The location of initial infections, as measured by the degree-centrality of initially infected yards, significantly impacted profitability, particularly under high inoculum pressure scenarios. Initial infections in highly central yards were more detrimental, exacerbating the spread and subsequent economic losses across the region. For example, in the high demand scenario at $p_0 = 0.01$, 0 sprays led to losses of -10% to -12% in the most central yards, compared to -6% to -8% in the least central yards. In contrast, when initial infections occurred in less central yards, the relative economic losses were reduced, particularly under higher market demand scenarios. 
 
-### Market Demand Conditions
+### Market demand conditions
 
 Different market demand conditions notably influenced the optimal disease management strategy. Under high market demand conditions, the impact of early fungicide interventions on profitability was moderate, reflecting more flexible quality standards. Conversely, under moderate and low market demand conditions, where quality requirements were more stringent, profitability was much more sensitive to fungicide application strategies. Increased fungicide use was essential under these lower demand scenarios to prevent severe quality-related profit reductions. For instance, under low demand, the economic penalty for under-spraying was greatest, with losses up to -10% at high $p_0$ and 0 sprays, and only reduced to -2% to -3% with 5-6 sprays.
 
@@ -281,7 +281,7 @@ One of the most striking finding from our simulations is the threshold-like resp
 
 Our study indicates that epidemic mitigation may not require intensive early season intervention when primary inoculum at the landscape level is sufficiently low. Indeed, we observed a 10-fold reduction in initial inoculum (from the levels observed in practice (cite https://doi.org/10.1094/PHYTO-04-18-0127-R) could largely eliminate economic damage from powdery mildew industry-wide. Further work is needed to understand whether area-wide interventions targeting primary inoculum reduction may be more cost-effective than field-level fungicide intensification. 
 
-When primary inoculum dose is not limiting, it is possible to calibrate intervention efforts to observed or expected primary inoculum dose and location. More intensive early season intervention is warranted when primary inoculum occurs in individual fields that are more highly connected in the disease transmission network or when the initial infections are caused by virulent strains that can infect more cultivars. The importance of intervention in highly connected nodes is well established in network epidemiology across physical and biological systems [[28]](#Pastor-Satorras2001) [[29]](#Cross2005).  The principle that controlling highly connected nodes can disproportionately reduce system-wide transmission appears to be robust across diverse epidemic contexts.
+When primary inoculum dose is not limiting, it is possible to calibrate intervention efforts to observed or expected primary inoculum dose and location. More intensive early season intervention is warranted when primary inoculum occurs in individual fields that are more highly connected in the disease transmission network or when the initial infections are caused by virulent strains that can infect more cultivars. The importance of intervention in highly connected nodes is well established in network epidemiology across physical and biological systems [[28]](#Pastor-Satorras2001) [[29]](#Cross2005). Minimizing economic loss was sensitive to the number of fungicide applications made in the earliest stage of epidemics, and this was particualry the case when primary inoculum first occurred in the most highly connected yards. The principle that controlling highly connected nodes can disproportionately reduce system-wide transmission appears to be robust across diverse epidemic contexts.
 
 ### Market sensitivity and economic injury level paradigms
 
