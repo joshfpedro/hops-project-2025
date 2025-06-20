@@ -377,3 +377,22 @@ We thank the many individuals that provided technical support for this project a
 23. <a id="Lofgren2014"></a>Lofgren, E.T., Halloran, M.E., Rivers, C.M., Drake, J.M., Porco, T.C., Lewis, B., Yang, W., Vespignani, A., Shaman, J., Eisenberg, J.N.S., Eisenberg, M.C., Marathe, M., Scarpino, S.V., Alexander, K.A., Meza, R., Ferrari, M.J., Hyman, J.M., Meyers, L.A., & Eubank, S. (2014). Mathematical models: A key tool for outbreak response. *Proc. Natl. Acad. Sci.*, 111, 18095-18096. https://doi.org/10.1073/pnas.1421551111
 
 24. <a id="Cunniffe2015"></a>Cunniffe, N.J., Koskella, B., Metcalf, C.J.E., Parnell, S., Gottwald, T.R., & Gilligan, C.A. (2015). Thirteen challenges in modelling plant diseases. *Epidemics*, 10, 6-10. https://doi.org/10.1016/j.epidem.2014.06.002
+
+## Appendix
+
+### Appendix A: Supplementary Figures
+
+\newpage
+
+![Relative Change in Profit for High, Moderate, and Low Market Demand in 2014. This heatmap shows the profit percentage change across different initial probability of disease (p₀) values, number of sprays in May, and percentile of dispersal-centrality for varying V6 percentages (0%, 25%, 50%, 75%, 100%) under three market demand scenarios. The visualization demonstrates how market conditions affect the optimal control strategies for hop powdery mildew management.](../figures/profit_heatmap_high_moderate_low_demand_2014.png)
+
+\newpage
+
+![Network of Sampled Hop Yards by Centrality Quantiles. This network visualization shows a representative sample of hop yards (one per centrality quantile) connected by disease transmission pathways. Node sizes are proportional to yard area, with colors indicating disease status (tI=0 in green, tI=1 in blue). Edge colors and styles represent the source infection status (sI=1 as solid brown lines, sI=0 as dashed gray lines), with edge widths proportional to directed transmission weights based on area, wind patterns, and distance. The network illustrates the spatial structure of disease transmission potential across the hop production landscape.](../figures/network_sampled_nodes_centrality_quantiles.png)
+
+\newpage
+
+
+## Acknowledgements
+
+We thank the hop growers in Oregon for their participation in this research and for sharing their production records. This work was supported by the U.S. Department of Agriculture-Agricultural Research Service and the Hop Research Council.
