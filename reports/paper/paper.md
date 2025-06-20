@@ -386,11 +386,9 @@ We thank the many individuals that provided technical support for this project a
 
 ![Relative Change in Profit for High, Moderate, and Low Market Demand in 2014. This heatmap shows the profit percentage change across different initial probability of disease (p₀) values, number of sprays in May, and percentile of dispersal-centrality for varying V6 percentages (0%, 25%, 50%, 75%, 100%) under three market demand scenarios. The visualization demonstrates how market conditions affect the optimal control strategies for hop powdery mildew management.](../figures/profit_heatmap_high_moderate_low_demand_2014.png)
 
-\newpage
 
 ![Network of Sampled Hop Yards by Centrality Quantiles. This network visualization shows a representative sample of hop yards (one per centrality quantile) connected by disease transmission pathways. Node sizes are proportional to yard area, with colors indicating disease status (tI=0 in green, tI=1 in blue). Edge colors and styles represent the source infection status (sI=1 as solid brown lines, sI=0 as dashed gray lines), with edge widths proportional to directed transmission weights based on area, wind patterns, and distance. The network illustrates the spatial structure of disease transmission potential across the hop production landscape.](../figures/network_sampled_nodes_centrality_quantiles.png)
 
-\newpage
 
 
 ## Acknowledgements
