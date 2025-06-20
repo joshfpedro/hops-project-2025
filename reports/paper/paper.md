@@ -31,9 +31,15 @@ Plant pathogens that disperse by airborne propagules may cause damage that exten
 6. [Appendix](#appendix)
 7. [Acknowledgements](#acknowledgements)
 
+---
+
 ## Introduction
 
-![../figures/logseq_flowchart for hops project.png](../figures/logseq_flowchart for hops project.png)
+
+![figure1](../figures/logseq_flowchart_for_hops_project.png)
+
+![figure1](../figures/logseq_flowchart_for_hops_project_2.png)
+
 
 There is increasing scrutiny of pesticides in agriculture and a need to develop management strategies and policies that reduce inputs while maintaining productivity and profitability [[1]](#Pimentel2005) [[2]](#Waard1993). Disease management efforts are most often directed at the scale of individual fields or farms, but plant pathogens do not respect management units or jurisdictional boundaries [[3]](#Gilligan2008). Management may be suboptimal or ineffective when not properly matched to the scale of pathogen dispersal [[4]](#Gilligan2007). The relative importance of inoculum produced endogenously within a given field or exogenously in other locations may dictate the mitigation strategies and the need for collective action in the form of area-wide management [[5]](#Irwin1999).
 
@@ -52,6 +58,8 @@ The pathosystem is further of interest because powdery mildew may cause economic
 Adding even more uncertainty, hops are sold almost entirely through marketing contracts that stipulate quality standards, usually with vague or subjective quality standards. Contracting is conducted for numerous agricultural commodities, and in 2017 21 percent of total U.S. crop production was under a contract agreement. Price risk reduction is stated as a major incentive for contracting. The potential for crop devaluation or, in the worst case rejection, may substantially affect disease management choices since the producer assumes firstly the risk of crop damage and secondly the penalty for failing on a contractual obligation. We expect that optimal disease control strategies may therefore be sensitive to contract structure when crop value or saleability is inseparably linked to crop quality metrics. Furthermore, the optimal control strategy may depend on practices in other fields and other farms given the potential for long-distance dispersal of the pathogen.
 
 Motivated by this pathosystem, we draw upon an exceptional rich data set collected from a census sample of hop yards in Oregon over a four-year period for our analyses. We formulate an epidemiological model for the development and spread of powdery mildew at the regional level, including the effect of fungicides applied in a field of interest and all other potential source fields. We couple the epidemiological model to an economic model of expected revenue and costs associated with disease management, devaluation or rejection due to quality defects, and market conditions. We then simulate varying conditions of the initial phases of epidemics related to primary inoculum dose, pathogen diversity, centrality in the transmission network of fields, and management intervention to identify control strategies that maximize profit under varying market demand scenarios.
+
+---
 
 ## Material and Methods
 
@@ -171,6 +179,8 @@ The maximum likelihood estimator $\hat{\boldsymbol{\theta}}$ was obtained by max
 
 All analyses were conducted in Python, making use of the NumPy, SciPy, and Statsmodels libraries for numerical computing and statistical modeling.
 
+---
+
 ## Simulation experiments
 
 For the simulation experiments described below, we constructed a synthetic landscape using the actual locations and sizes of hop yards in each of the years 2014 to 2017 from our data set. Each hop yard was planted to one of four representative cultivars (Chinook, Simcoe®, Nugget, or Mosaic®), chosen because they were commercially relevant at the time of this research, either possessed or did not possess the R6 resistance, and can be sold for direct use in brewing or alternatively can be processed to extract alpha-acids as a secondary market. We assumed equal susceptibility to powdery mildew given a compatible strain of pathogen. Cultivar assignments were made at random for each yard, subject to a 1:1 ratio of cultivars that possess R6 or non-R6 in the entire landscape. The same yard-level assignments were used across simulation runs for a given year.
@@ -209,6 +219,8 @@ Table 3 provides a concise overview of the key parameters we varied in the neste
 
 Beyond these parameters, the simulation code uses yard-level attributes (area, distance matrices, wind data) and the fitted model coefficients described in Sections 2 and 3. In each scenario, the model outputs include time-series of disease incidence and final net profit estimates under the specified market-demand conditions.
 
+---
+
 ## Results
 
 ### Parameter estimates for epidemic model
@@ -234,6 +246,8 @@ Beyond these parameters, the simulation code uses yard-level attributes (area, d
 To understand the temporal dynamics of the epidemic model, we compared the parameter estimates for the two key transition periods: May-June and June-July (Table 4). Several notable differences emerge between these periods. 
 
 The baseline log-odds of disease ($\beta_1$, $\beta_2$) were lower (more negative) in May-June (-2.06, -4.15) than in June-July (-2.79, -3.88), indicating a lower baseline risk of disease early in the season. The effect of autoinfection ($\delta_1$, $\delta_2$) was much larger in May--June (2074.35, 120.46) compared to June-July (2.94, 8.04), suggesting that local sources of inoculum are most influential at the start of the epidemic. The effect of dispersal from other yards ($\gamma_1$, $\gamma_2$) was also much greater in May-June (34358.91, 14536.03) than in June-July (1390.71, 286.8), highlighting the importance of regional spread early in the epidemic. The dispersal kernel parameters ($\alpha_1$, $\alpha_2$) were larger in June-July (1.0, 2.04) than in May-June (0.71, 2.67), indicating a possible shift in the spatial scale of dispersal as the season progresses. The fungicide effect parameters ($\eta_{11}$, $\eta_{12}$, $\eta_{21}$, $\eta_{22}$) were generally larger in May-June, especially $\eta_{11}$ (3.51 vs 0.02), suggesting that fungicide applications are more impactful on reducing disease early in the season versus later. Overall, these differences indicate that both local and regional sources of inoculum are most important in the early epidemic phase, and that fungicide applications have their greatest impact when applied earlier in the epidemic. As the season progresses, the epidemic becomes less sensitive to these factors.
+
+---
 
 ## Simulation experiments
 
@@ -271,6 +285,8 @@ Different market demand conditions notably influenced the optimal disease manage
 | Moderate Demand, High Centrality | -8% | -2% | 0% |
 | High Demand, High Centrality | -12% | -3% | 0% |
 
+---
+
 ## Discussion
 
 Our analysis addresses a multifaceted challenge in agricultural disease management where epidemic control decisions must account for complex interactions between pathogen biology, management practices, market conditions, and regional-scale disease transmission. Our motivating pathosystem represents a complex scenario for economic epidemiology, combining spread of a highly dispersible pathogen capable of long-distance transmission, potential damage to both yield and quality metrics, market-sensitive quality standards, and strain-specific cultivar resistance creating a heterogeneous landscape of host connectivity. This complexity necessitates a modeling approach that simultaneously captures network-scale disease transmission, multi-dimensional crop damage functions, and market-dependent economic outcomes. Three key findings emerge from our simulations. First, epidemic control is exquisitely sensitive to conditions in the earliest stages of outbreaks, with relatively small changes in initial inoculum dose and early-season fungicide applications translating to substantial economic differences. Second, there appears to exists a critical threshold in pathogen pressure below which intensive management becomes unnecessary, suggesting opportunities for area-wide interventions targeting primary inoculum reduction. Third, quality-sensitive market conditions paradoxically drive more intensive fungicide use under depressed demand scenarios, challenging traditional economic injury level concepts when crop value is tied to quality standards rather than yield alone.
@@ -292,6 +308,8 @@ Our finding that depressed market conditions lead to more intensive fungicide us
 Several limitations should be considered when interpreting our results. We recognized that the damage functions linking disease incidence to cone color and subsequent price adjustments rely on relationships derived from literature rather than direct observation. This may introduce uncertainty in the precise magnitude of the economic effects we estimate in the damage functions. However, the directional and relative importance of the epidemic factors and management interventions we report remain valid. Ambiguous language in production contracts is problematic and also complicates model parameterization, but there are not easy solutions to this problem. Indeed, this may be the largest source of uncertainty in our modeling and also one of the most difficult to model precisely.
 
 We focused on annual profit maximization at the landscape-level as our outcome of interest. This may be appropriate for producers with productivist ideology (cite https://doi.org/10.1080/08941920.2017.1295498) but ignores grower risk aversion and externalities whose costs are not borne directly by producers. We also do not identify the optimal strategy for an individual grower or an individual yard. Many other production or environmental objectives could be considered and at time steps longer than a single crop year. Nonetheless, the coupled epidemiological-economic modeling framework we developed provides a foundation for analyzing other production objections or interventions in complex pathosystems and production scenarios.
+
+---
 
 ## Appendix
 
@@ -324,9 +342,13 @@ $$\eta_{i, \tau}=\sum_{k=1}^{K} I_{k}^{(t)}(i)\left[\beta_{k, \tau}+\delta_{k, \
 | $\theta_0$ | [value] |
 | $\theta_1$ | [value] |
 
+---
+
 ## Acknowledgements
 
 We thank the many individuals that provided technical support for this project and the participating grower cooperators that provide access to their fields and production records. This research was conducted in support of U.S. Department of Agriculture CRIS project 2072-21000-061-000-D. Funding was provided by National Institute of Food and Agriculture Specialty Crop Research Initiative award number (2021-51181-35901).
+
+---
 
 ## References
 
@@ -378,11 +400,12 @@ We thank the many individuals that provided technical support for this project a
 
 24. <a id="Cunniffe2015"></a>Cunniffe, N.J., Koskella, B., Metcalf, C.J.E., Parnell, S., Gottwald, T.R., & Gilligan, C.A. (2015). Thirteen challenges in modelling plant diseases. *Epidemics*, 10, 6-10. https://doi.org/10.1016/j.epidem.2014.06.002
 
+---
+
 ## Appendix
 
-### Appendix A: Supplementary Figures
 
-\newpage
+### Appendix A: Supplementary Figures
 
 ![Relative Change in Profit for High, Moderate, and Low Market Demand in 2014. This heatmap shows the profit percentage change across different initial probability of disease (p₀) values, number of sprays in May, and percentile of dispersal-centrality for varying V6 percentages (0%, 25%, 50%, 75%, 100%) under three market demand scenarios. The visualization demonstrates how market conditions affect the optimal control strategies for hop powdery mildew management.](../figures/profit_heatmap_high_moderate_low_demand_2014.png)
 
@@ -390,7 +413,4 @@ We thank the many individuals that provided technical support for this project a
 ![Network of Sampled Hop Yards by Centrality Quantiles. This network visualization shows a representative sample of hop yards (one per centrality quantile) connected by disease transmission pathways. Node sizes are proportional to yard area, with colors indicating disease status (tI=0 in green, tI=1 in blue). Edge colors and styles represent the source infection status (sI=1 as solid brown lines, sI=0 as dashed gray lines), with edge widths proportional to directed transmission weights based on area, wind patterns, and distance. The network illustrates the spatial structure of disease transmission potential across the hop production landscape.](../figures/network_sampled_nodes_centrality_quantiles.png)
 
 
-
-## Acknowledgements
-
-We thank the hop growers in Oregon for their participation in this research and for sharing their production records. This work was supported by the U.S. Department of Agriculture-Agricultural Research Service and the Hop Research Council.
+---
