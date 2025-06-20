@@ -1,6 +1,4 @@
 IPython
-autograd
-dash
 folium
 geopandas
 geopy
