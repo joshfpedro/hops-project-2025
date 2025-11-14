@@ -19,10 +19,6 @@ hops-project-2025/
 │   ├── 13.1-map-visualization.ipynb
 │   └── 13.2.1-heatmaps.ipynb
 ├── reports/                # Generated analysis reports and figures
-├── src/                    # Source code and utilities
-│   ├── anonymize_growers.py
-│   ├── config.py
-│   └── setup.py
 ├── requirements.txt        # Python dependencies
 └── LICENSE                # MIT License
 ```
@@ -78,7 +74,7 @@ Start with the data preprocessing notebook to prepare anonymized datasets:
 jupyter notebook notebooks/1-data-preprocessing.ipynb
 ```
 
-**Important**: All grower data has been anonymized using `src/anonymize_growers.py`. Grower identifiers are tokenized as `GRW_...` to protect privacy.
+**Important**: All grower data has been anonymized. Grower identifiers are tokenized as `GRW_...` to protect privacy.
 
 ### Analysis Pipeline
 
@@ -98,7 +94,7 @@ Navigate to the `notebooks/` directory and open the desired notebook.
 
 ## Data Privacy
 
-This repository contains anonymized data only. All personally identifiable information (PII) has been removed or tokenized. The anonymization script (`src/anonymize_growers.py`) ensures grower identities are protected while maintaining the scientific integrity of the analysis.
+This repository contains anonymized data only. All personally identifiable information (PII) has been removed or tokenized. Grower identities are protected while maintaining the scientific integrity of the analysis.
 
 ## Citation
 
