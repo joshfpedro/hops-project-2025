@@ -1,82 +1,122 @@
-# Economic Policy Optimization for Regional Plant Disease Management: A Hop Powdery Mildew Case Study
+# Hops Project 2025
 
-This repository contains code and analysis for optimizing economic control strategies for aerially-dispersed plant pathogens at the regional scale, using hop powdery mildew as a case study.
+This repository contains the code and analysis for an academic research project on powdery mildew disease spread and fungicide management in hop production systems.
 
 ## Overview
 
-This project develops and implements a coupled epidemiological-economic model to simulate the impact of epidemic conditions and coordinated management interventions on profitability in agricultural systems. It aims to provide insights for agricultural stakeholders by modeling the economic impacts of plant disease and optimizing management strategies at a regional level. The findings can be interactively explored using the accompanying Streamlit application (`app.py`).
-
-## Key Features
-
-- **Network-based epidemiological modeling:** Simulates realistic disease spread dynamics.
-- **Integrated economic analysis:** Assesses impacts on yield, quality, and overall profitability.
-- **Flexible simulation framework:** Enables testing of diverse management interventions.
-- **Scenario-based optimization:** Identifies optimal control strategies under various conditions (e.g., inoculum levels, pathogen diversity, market demand).
+This project analyzes disease transmission patterns in hop farms using network analysis, maximum likelihood estimation, and spatial modeling. The research investigates the spread of powdery mildew across hop-growing regions and evaluates intervention strategies including fungicide spraying policies.
 
 ## Project Structure
 
-- `app.py`: Interactive Streamlit application for visualizing simulation results.
-- `data/`: Contains raw, processed, and simulation output data.
-  - `data/raw/`: Original unprocessed data.
-  - `data/processed/`: Cleaned and transformed data ready for analysis.
-  - `data/processed/simulations/`: Output from simulation runs.
-- `src/`: Python source code for models, simulation functions, and utility scripts.
-- `notebooks/`: Jupyter notebooks detailing the analysis workflow:
-  - `1-data-preprocessing.ipynb`: Data cleaning and preparation.
-  - `2-mle.ipynb`: Maximum likelihood estimation of epidemiological model parameters.
-  - `7-simulations.ipynb`: Core simulation experiments.
-  - `13-visualization.ipynb`: Generation of static plots and result summaries.
-- `reports/`: Research papers, figures, and other documentation.
-  - `paper/`: Drafts and materials for the research manuscript.
-- `requirements.txt`: Lists project dependencies.
+```
+hops-project-2025/
+├── data/                    # Data files (anonymized for privacy)
+├── notebooks/              # Jupyter notebooks for analysis
+│   ├── 1-data-preprocessing.ipynb
+│   ├── 2.3-mle all data_power.ipynb
+│   ├── 2.4-confidence-intervals.ipynb
+│   ├── 12.1.6-v6-transmissivity-simulations_power.ipynb
+│   ├── 13.1-map-visualization.ipynb
+│   └── 13.2.1-heatmaps.ipynb
+├── reports/                # Generated analysis reports and figures
+├── src/                    # Source code and utilities
+│   ├── anonymize_growers.py
+│   ├── config.py
+│   └── setup.py
+├── requirements.txt        # Python dependencies
+└── LICENSE                # MIT License
+```
 
-## Key Findings
+## Key Features
 
-The project's analysis yields several key insights into optimal disease management strategies, considering factors like initial inoculum dose, pathogen diversity (e.g., V6-virulent strains), dispersal centrality within the grower network, and varying market conditions. Detailed findings and visualizations are available in the research paper and can be interactively explored using the Streamlit application.
+- **Data Preprocessing**: Anonymized processing of fungicide spray records and disease data
+- **Maximum Likelihood Estimation (MLE)**: Statistical parameter estimation for disease transmission models
+- **Confidence Intervals**: Uncertainty quantification for model parameters
+- **Network Analysis**: Spatial analysis of disease spread using graph theory
+- **Transmissivity Simulations**: Monte Carlo simulations for disease transmission scenarios
+- **Visualization**: Interactive maps and heatmaps for spatial disease patterns
+
+## Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/joshfpedro/hops-project-2025.git
+cd hops-project-2025
+```
+
+2. Create a virtual environment (recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
 ## Requirements
 
-- Python 3.x
-- Project dependencies are listed in `requirements.txt`. Install them using:
-  ```bash
-  pip install -r requirements.txt
-  ```
-- Key dependencies include NumPy, SciPy, Pandas, Statsmodels, Plotly, and Streamlit.
+The project requires Python 3.x and the following main packages:
+
+- Data Analysis: `pandas`, `numpy`, `scipy`, `statsmodels`, `scikit-learn`
+- Visualization: `matplotlib`, `seaborn`, `plotly`, `folium`
+- Geospatial: `geopandas`, `geopy`, `pyproj`
+- Network Analysis: `networkx`, `igraph`
+- Jupyter: `IPython`, `ipykernel`, `jupyter_dash`, `ipywidgets`
+- Utilities: `tqdm`, `joblib`, `tabulate`
+
+See `requirements.txt` for a complete list.
 
 ## Usage
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/your-username/your-repository-name.git # TODO: Replace with actual URL
-   cd your-repository-name
-   ```
-2. **Install dependencies:**
-   Ensure you have Python 3.x installed. Then, install the project dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. **Explore the analysis via Jupyter Notebooks:**
-   The `notebooks/` directory contains the detailed analysis workflow. It's recommended to run them in numerical order to follow the data processing and modeling steps. Start with `notebooks/1-data-preprocessing.ipynb`.
-4. **Run the interactive Streamlit application:**
-   To explore the simulation results interactively, run the Streamlit app:
-   ```bash
-   streamlit run app.py
-   ```
-5. **Consult the research paper:**
-   For a detailed understanding of the methodology, model specifics, and in-depth discussion of results, please refer to the manuscript in `reports/paper/` (e.g., `paper.md` or `main.tex`).
+### Data Preprocessing
+
+Start with the data preprocessing notebook to prepare anonymized datasets:
+
+```bash
+jupyter notebook notebooks/1-data-preprocessing.ipynb
+```
+
+**Important**: All grower data has been anonymized using `src/anonymize_growers.py`. Grower identifiers are tokenized as `GRW_...` to protect privacy.
+
+### Analysis Pipeline
+
+1. **Data Preprocessing** (`1-data-preprocessing.ipynb`): Clean and prepare spray and disease data
+2. **MLE Analysis** (`2.3-mle all data_power.ipynb`): Estimate disease transmission parameters
+3. **Confidence Intervals** (`2.4-confidence-intervals.ipynb`): Calculate parameter uncertainties
+4. **Transmissivity Simulations** (`12.1.6-v6-transmissivity-simulations_power.ipynb`): Run disease spread scenarios
+5. **Visualization** (`13.1-map-visualization.ipynb`, `13.2.1-heatmaps.ipynb`): Generate spatial visualizations
+
+### Running Notebooks
+
+```bash
+jupyter notebook
+```
+
+Navigate to the `notebooks/` directory and open the desired notebook.
+
+## Data Privacy
+
+This repository contains anonymized data only. All personally identifiable information (PII) has been removed or tokenized. The anonymization script (`src/anonymize_growers.py`) ensures grower identities are protected while maintaining the scientific integrity of the analysis.
 
 ## Citation
 
-If you use this code or findings in your research, please cite:
-TODO: Add appropriate citation details for the research paper once published or available as a preprint.
-e.g., Pedro, J. F., et al. (Year). Title of Paper. *Journal/Conference*. Link/DOI
+If you use this code or methodology in your research, please cite the accompanying academic paper:
+
+```
+[Citation details to be added upon publication]
+```
 
 ## License
 
-This project is licensed under the terms of the TODO: Specify License Type (e.g., MIT License, Apache License 2.0).
-See the `LICENSE` file for more details (TODO: Ensure a LICENSE file exists and is correctly referenced, or add the full license text here if a separate file is not used).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-For questions or collaboration, please contact:
-Joshua F. Pedro ([joshfpedro@gmail.com](mailto:joshfpedro@gmail.com))
+For questions about this research or code, please contact:
+- Joshua Pedro (joshfpedro)
+
+## Acknowledgments
+
+This research was conducted as part of an academic study on disease management in agricultural systems. We thank the hop-growing community for their cooperation while maintaining complete anonymity of all participants.
