@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.2.26)  21 FEB 2026 16:09
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2023.2.26)  23 FEB 2026 12:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -984,7 +984,16 @@ Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \diagbox@insepr=\dimen319
 \diagbox@outsepl=\dimen320
 \diagbox@outsepr=\dimen321
-) (c:/texlive/2022/texmf-dist/tex/latex/comment/comment.sty
+) (c:/texlive/2022/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2020/03/25 PSNFSS-v9.3 Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+ (c:/texlive/2022/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+ (c:/texlive/2022/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+)) (c:/texlive/2022/texmf-dist/tex/latex/comment/comment.sty
 \CommentStream=\write5
  Excluding comment 'comment') (c:/texlive/2022/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
@@ -1024,8 +1033,8 @@ LaTeX Warning: Command \@parboxrestore  has changed.
 
 LaTeX Info: Redefining \\ on input line 3131.
 )
-e:/Google Drive/Github/hops-project-2025/reports/paper.tex:104: Undefined control sequence.
-l.104 \pdfsuppresswarningpagegroup
+e:/Google Drive/Github/hops-project-2025/reports/paper.tex:105: Undefined control sequence.
+l.105 \pdfsuppresswarningpagegroup
                                   =1
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1034,18 +1043,18 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-e:/Google Drive/Github/hops-project-2025/reports/paper.tex:104: LaTeX Error: Missing \begin{document}.
+e:/Google Drive/Github/hops-project-2025/reports/paper.tex:105: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.104 \pdfsuppresswarningpagegroup=
+l.105 \pdfsuppresswarningpagegroup=
                                    1
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-LaTeX Font Info:    Trying to load font information for T1+lmss on input line 105.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 106.
 (c:/texlive/2022/texmf-dist/tex/latex/lm/t1lmss.fd
 File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
@@ -1057,33 +1066,33 @@ Package csquotes Info: Redefining alias 'default' -> 'british'.
 No file paper.aux.
 \openout1 = `paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 130.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 130.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 131.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 131.
 (c:/texlive/2022/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 130.
-LaTeX Font Info:    ... okay on input line 130.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
+LaTeX Font Info:    ... okay on input line 131.
 
 
-Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 130.
+Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 131.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1159,9 +1168,9 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'paper.bbl' not found.
 
 No file paper.bbl.
-Package biblatex Info: Reference section=0 on input line 130.
-Package biblatex Info: Reference segment=0 on input line 130.
-Package hyperref Info: Link coloring ON on input line 130.
+Package biblatex Info: Reference section=0 on input line 131.
+Package biblatex Info: Reference segment=0 on input line 131.
+Package hyperref Info: Link coloring ON on input line 131.
 \@outlinefile=\write6
 \openout6 = `paper.out'.
 
@@ -1177,276 +1186,278 @@ Package caption Info: End \AtBeginDocument code.
 [1
 
 ]
-Package hyperref Info: bookmark level for unknown added defaults to 0 on input line 131.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 131.
+Package hyperref Info: bookmark level for unknown added defaults to 0 on input line 132.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 132.
  (c:/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 131.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 132.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 131.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 132.
  (c:/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 131.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 132.
  (c:/texlive/2022/texmf-dist/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-Overfull \hbox (6.84007pt too wide) in paragraph at lines 146--147
+Package hyperref Info: bookmark level for unknown replaced defaults to 0 on input line 142.
+ [2]
+Overfull \hbox (6.84007pt too wide) in paragraph at lines 147--148
 []\T1/lmr/bx/n/10 Keywords\T1/lmr/m/n/10 : plant dis-ease, patho-gens, epi-demi-ology, eco-nomic im-pacts, dis-ease man-age-ment, landscape-
  []
 
-[2] [3]
+[3]
 No file paper.toc.
 \tf@toc=\write7
 \openout7 = `paper.toc'.
 
 [4]
 
-LaTeX Warning: Citation 'Pimentel2005' on page 5 undefined on input line 167.
+LaTeX Warning: Citation 'Pimentel2005' on page 5 undefined on input line 168.
 
 
-LaTeX Warning: Citation 'Waard1993' on page 5 undefined on input line 167.
+LaTeX Warning: Citation 'Waard1993' on page 5 undefined on input line 168.
 
 
-LaTeX Warning: Citation 'Gilligan2008' on page 5 undefined on input line 167.
+LaTeX Warning: Citation 'Gilligan2008' on page 5 undefined on input line 168.
 
 
-LaTeX Warning: Citation 'Gilligan2007' on page 5 undefined on input line 167.
+LaTeX Warning: Citation 'Gilligan2007' on page 5 undefined on input line 168.
 
 
-LaTeX Warning: Citation 'Irwin1999' on page 5 undefined on input line 167.
+LaTeX Warning: Citation 'Irwin1999' on page 5 undefined on input line 168.
 
 
-Overfull \hbox (7.25076pt too wide) in paragraph at lines 167--168
+Overfull \hbox (7.25076pt too wide) in paragraph at lines 168--169
 \T1/lmr/m/n/10 policies that re-duce in-puts while main-tain-ing pro-ductiv-ity and prof-it-ab-il-ity ([]; []).
  []
 
 
-LaTeX Warning: Citation 'Plank1963' on page 5 undefined on input line 169.
+LaTeX Warning: Citation 'Plank1963' on page 5 undefined on input line 170.
 
 
-LaTeX Warning: Citation 'Cunniffe2015b' on page 5 undefined on input line 169.
+LaTeX Warning: Citation 'Cunniffe2015b' on page 5 undefined on input line 170.
 
 
-LaTeX Warning: Citation 'Fraser2004' on page 5 undefined on input line 169.
+LaTeX Warning: Citation 'Fraser2004' on page 5 undefined on input line 170.
 
 
-LaTeX Warning: Citation 'Severns2022' on page 5 undefined on input line 169.
+LaTeX Warning: Citation 'Severns2022' on page 5 undefined on input line 170.
 
 
-LaTeX Warning: Citation 'Estep2014' on page 5 undefined on input line 169.
+LaTeX Warning: Citation 'Estep2014' on page 5 undefined on input line 170.
 
 
-LaTeX Warning: Citation 'Ojiambo2017' on page 5 undefined on input line 169.
+LaTeX Warning: Citation 'Ojiambo2017' on page 5 undefined on input line 170.
 
 
-LaTeX Warning: Citation 'Severns2014' on page 5 undefined on input line 169.
+LaTeX Warning: Citation 'Severns2014' on page 5 undefined on input line 170.
 
 
-LaTeX Warning: Citation 'Xu1998' on page 5 undefined on input line 169.
+LaTeX Warning: Citation 'Xu1998' on page 5 undefined on input line 170.
 
 
-LaTeX Warning: Citation 'Margosian2009' on page 5 undefined on input line 169.
+LaTeX Warning: Citation 'Margosian2009' on page 5 undefined on input line 170.
 
 
-Overfull \hbox (16.16559pt too wide) in paragraph at lines 169--170
+Overfull \hbox (16.16559pt too wide) in paragraph at lines 170--171
 \T1/lmr/m/n/10 in-oculum only delay epi-dem-ics, with the ef-fect be-ing in-versely pro-por-tional to epi-demic ve-lo-city ([]).
  []
 
 
-LaTeX Warning: Citation 'Pautasso2010' on page 5 undefined on input line 171.
+LaTeX Warning: Citation 'Pautasso2010' on page 5 undefined on input line 172.
 
 
-LaTeX Warning: Citation 'Lofgren2014' on page 5 undefined on input line 171.
+LaTeX Warning: Citation 'Lofgren2014' on page 5 undefined on input line 172.
 
 
-LaTeX Warning: Citation 'etherton_are_2023' on page 5 undefined on input line 171.
+LaTeX Warning: Citation 'etherton_are_2023' on page 5 undefined on input line 172.
 
 
-LaTeX Warning: Citation 'Jeddi_DePaula_2025' on page 5 undefined on input line 171.
+LaTeX Warning: Citation 'Jeddi_DePaula_2025' on page 5 undefined on input line 172.
 
 
-LaTeX Warning: Citation 'Jeddi_DePaula_2025' on page 5 undefined on input line 171.
+LaTeX Warning: Citation 'Jeddi_DePaula_2025' on page 5 undefined on input line 172.
 
 
-LaTeX Warning: Citation 'Lazebnik' on page 5 undefined on input line 171.
+LaTeX Warning: Citation 'Lazebnik' on page 5 undefined on input line 172.
 
 
-LaTeX Warning: Citation 'donatelli' on page 5 undefined on input line 171.
+LaTeX Warning: Citation 'donatelli' on page 5 undefined on input line 172.
 
 
-LaTeX Warning: Citation 'Cunniffe2015' on page 5 undefined on input line 171.
+LaTeX Warning: Citation 'Cunniffe2015' on page 5 undefined on input line 172.
 
 
-LaTeX Warning: Citation 'Aylor2017' on page 5 undefined on input line 171.
+LaTeX Warning: Citation 'Aylor2017' on page 5 undefined on input line 172.
 
 
-LaTeX Warning: Citation 'Lazebnik' on page 5 undefined on input line 171.
+LaTeX Warning: Citation 'Lazebnik' on page 5 undefined on input line 172.
 
 
-LaTeX Warning: Citation 'delamater_2019' on page 5 undefined on input line 171.
+LaTeX Warning: Citation 'delamater_2019' on page 5 undefined on input line 172.
 
 
-LaTeX Warning: Citation 'donatelli' on page 5 undefined on input line 171.
+LaTeX Warning: Citation 'donatelli' on page 5 undefined on input line 172.
 
 
-LaTeX Warning: Citation 'Firester2018' on page 5 undefined on input line 171.
+LaTeX Warning: Citation 'Firester2018' on page 5 undefined on input line 172.
 
 
-LaTeX Warning: Citation 'Block2021' on page 5 undefined on input line 173.
+LaTeX Warning: Citation 'Block2021' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation 'Gent2017' on page 5 undefined on input line 173.
+LaTeX Warning: Citation 'Gent2017' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation 'Royle1978' on page 5 undefined on input line 173.
+LaTeX Warning: Citation 'Royle1978' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation 'Wolfenbarger2016' on page 5 undefined on input line 173.
+LaTeX Warning: Citation 'Wolfenbarger2016' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation 'Gent2019b' on page 5 undefined on input line 173.
+LaTeX Warning: Citation 'Gent2019b' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation 'Mahaffee2009' on page 5 undefined on input line 173.
+LaTeX Warning: Citation 'Mahaffee2009' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation 'Nelson2015' on page 5 undefined on input line 173.
+LaTeX Warning: Citation 'Nelson2015' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation 'Probst2016' on page 5 undefined on input line 173.
+LaTeX Warning: Citation 'Probst2016' on page 5 undefined on input line 174.
 
 
-LaTeX Warning: Citation 'Royle1978' on page 5 undefined on input line 173.
+LaTeX Warning: Citation 'Royle1978' on page 5 undefined on input line 174.
 
-Package hyperref Info: bookmark level for unknown deleted defaults to 0 on input line 175.
+Package hyperref Info: bookmark level for unknown deleted defaults to 0 on input line 176.
 
-LaTeX Warning: Citation 'Mahaffee2009' on page 5 undefined on input line 175.
-
-
-LaTeX Warning: Citation 'Rivedal2023' on page 5 undefined on input line 175.
+LaTeX Warning: Citation 'Mahaffee2009' on page 5 undefined on input line 176.
 
 
-LaTeX Warning: Citation 'Gent2008' on page 5 undefined on input line 175.
+LaTeX Warning: Citation 'Rivedal2023' on page 5 undefined on input line 176.
 
 
-LaTeX Warning: Citation 'Weldon2021' on page 5 undefined on input line 175.
+LaTeX Warning: Citation 'Gent2008' on page 5 undefined on input line 176.
 
 
-LaTeX Warning: Citation 'Wolfenbarger2015' on page 5 undefined on input line 175.
+LaTeX Warning: Citation 'Weldon2021' on page 5 undefined on input line 176.
 
 
-LaTeX Warning: Citation 'Gent2019b' on page 5 undefined on input line 175.
+LaTeX Warning: Citation 'Wolfenbarger2015' on page 5 undefined on input line 176.
 
 
-LaTeX Warning: Citation 'Laurie2023' on page 5 undefined on input line 175.
+LaTeX Warning: Citation 'Gent2019b' on page 5 undefined on input line 176.
 
 
-LaTeX Warning: Citation 'Gent2019a' on page 5 undefined on input line 175.
+LaTeX Warning: Citation 'Laurie2023' on page 5 undefined on input line 176.
 
 
-LaTeX Warning: Citation 'Gent2019b' on page 5 undefined on input line 175.
+LaTeX Warning: Citation 'Gent2019a' on page 5 undefined on input line 176.
 
 
-LaTeX Warning: Citation 'Gent2018' on page 5 undefined on input line 175.
+LaTeX Warning: Citation 'Gent2019b' on page 5 undefined on input line 176.
+
+
+LaTeX Warning: Citation 'Gent2018' on page 5 undefined on input line 176.
 
 [5]
 
-LaTeX Warning: Citation 'Burdon1997' on page 6 undefined on input line 177.
+LaTeX Warning: Citation 'Burdon1997' on page 6 undefined on input line 178.
 
 
-LaTeX Warning: Citation 'Koelle2022' on page 6 undefined on input line 177.
+LaTeX Warning: Citation 'Koelle2022' on page 6 undefined on input line 178.
 
 
-LaTeX Warning: Citation 'Mundt2002' on page 6 undefined on input line 177.
+LaTeX Warning: Citation 'Mundt2002' on page 6 undefined on input line 178.
 
 
-LaTeX Warning: Citation 'Ostfeld2012' on page 6 undefined on input line 177.
+LaTeX Warning: Citation 'Ostfeld2012' on page 6 undefined on input line 178.
 
 
-LaTeX Warning: Citation 'McDonald2002' on page 6 undefined on input line 177.
+LaTeX Warning: Citation 'McDonald2002' on page 6 undefined on input line 178.
 
 
-LaTeX Warning: Citation 'Gent2017' on page 6 undefined on input line 177.
+LaTeX Warning: Citation 'Gent2017' on page 6 undefined on input line 178.
 
 
-LaTeX Warning: Citation 'Royle1978' on page 6 undefined on input line 177.
+LaTeX Warning: Citation 'Royle1978' on page 6 undefined on input line 178.
 
 
-LaTeX Warning: Citation 'Wolfenbarger2016' on page 6 undefined on input line 177.
+LaTeX Warning: Citation 'Wolfenbarger2016' on page 6 undefined on input line 178.
 
 
-LaTeX Warning: Citation 'Neve1991' on page 6 undefined on input line 177.
+LaTeX Warning: Citation 'Neve1991' on page 6 undefined on input line 178.
 
 
-Overfull \hbox (12.01509pt too wide) in paragraph at lines 177--178
+Overfull \hbox (12.01509pt too wide) in paragraph at lines 178--179
 []\T1/lmr/m/n/10 Pathogenic vari-ation is com-mon in patho-gens across plant and an-imal hosts ([]; [])
  []
 
 
-LaTeX Warning: Citation 'Gent2014' on page 6 undefined on input line 179.
+LaTeX Warning: Citation 'Gent2014' on page 6 undefined on input line 180.
 
 
-LaTeX Warning: Citation 'Neve1991' on page 6 undefined on input line 179.
+LaTeX Warning: Citation 'Neve1991' on page 6 undefined on input line 180.
 
 
-LaTeX Warning: Citation 'Royle1978' on page 6 undefined on input line 179.
+LaTeX Warning: Citation 'Royle1978' on page 6 undefined on input line 180.
 
 
-LaTeX Warning: Citation 'Savary2006' on page 6 undefined on input line 179.
+LaTeX Warning: Citation 'Savary2006' on page 6 undefined on input line 180.
 
 
-LaTeX Warning: Citation 'Esker2013' on page 6 undefined on input line 179.
+LaTeX Warning: Citation 'Esker2013' on page 6 undefined on input line 180.
 
 
-LaTeX Warning: Citation 'Zadoks1985' on page 6 undefined on input line 179.
+LaTeX Warning: Citation 'Zadoks1985' on page 6 undefined on input line 180.
 
 
-LaTeX Warning: Citation 'Zadoks1985' on page 6 undefined on input line 179.
+LaTeX Warning: Citation 'Zadoks1985' on page 6 undefined on input line 180.
 
 
-LaTeX Warning: Citation 'Nelson2015' on page 6 undefined on input line 179.
+LaTeX Warning: Citation 'Nelson2015' on page 6 undefined on input line 180.
 
 
-LaTeX Warning: Citation 'Royle1978' on page 6 undefined on input line 179.
+LaTeX Warning: Citation 'Royle1978' on page 6 undefined on input line 180.
 
 
-LaTeX Warning: Citation 'Nelson2015' on page 6 undefined on input line 179.
+LaTeX Warning: Citation 'Nelson2015' on page 6 undefined on input line 180.
 
 
-LaTeX Warning: Citation 'Twomey2015' on page 6 undefined on input line 179.
+LaTeX Warning: Citation 'Twomey2015' on page 6 undefined on input line 180.
 
 
-LaTeX Warning: Citation 'MacDonald2019' on page 6 undefined on input line 181.
+LaTeX Warning: Citation 'MacDonald2019' on page 6 undefined on input line 182.
 
 
-LaTeX Warning: Citation 'Key2005' on page 6 undefined on input line 181.
+LaTeX Warning: Citation 'Key2005' on page 6 undefined on input line 182.
 
 
-LaTeX Warning: Citation 'Zhang2015' on page 6 undefined on input line 181.
+LaTeX Warning: Citation 'Zhang2015' on page 6 undefined on input line 182.
 
 
-LaTeX Warning: File `figures/logseq_flowchart_for_hops_project_2.png' not found on input line 185.
+LaTeX Warning: File `figures/logseq_flowchart_for_hops_project_2.png' not found on input line 186.
 
-e:/Google Drive/Github/hops-project-2025/reports/paper.tex:185: Unable to load picture or PDF file 'figures/logseq_flowchart_for_hops_project_2.png'.
+e:/Google Drive/Github/hops-project-2025/reports/paper.tex:186: Unable to load picture or PDF file 'figures/logseq_flowchart_for_hops_project_2.png'.
 <to be read again> 
                    }
-l.185 .../logseq_flowchart_for_hops_project_2.png}
+l.186 .../logseq_flowchart_for_hops_project_2.png}
                                                   
 The requested image couldn't be read because
 it was not a recognized image format.
 
 
-e:/Google Drive/Github/hops-project-2025/reports/paper.tex:185: Package graphics Error: Division by 0.
+e:/Google Drive/Github/hops-project-2025/reports/paper.tex:186: Package graphics Error: Division by 0.
 
 See the graphics package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.185 .../logseq_flowchart_for_hops_project_2.png}
+l.186 .../logseq_flowchart_for_hops_project_2.png}
                                                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1457,80 +1468,79 @@ File: figures/logseq_flowchart_for_hops_project_2.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Package hyperref Info: bookmark level for unknown replaced defaults to 0 on input line 190.
 
-LaTeX Warning: Citation 'Gent2019a' on page 6 undefined on input line 190.
+LaTeX Warning: Citation 'Gent2019a' on page 6 undefined on input line 191.
 
 
-LaTeX Warning: Reference `fig:stakeholder_network' on page 6 undefined on input line 190.
+LaTeX Warning: Reference `fig:stakeholder_network' on page 6 undefined on input line 191.
 
 [6]
 
-LaTeX Warning: Citation 'Barth1994' on page 7 undefined on input line 196.
+LaTeX Warning: Citation 'Barth1994' on page 7 undefined on input line 197.
 
 
-LaTeX Warning: Citation 'Mahaffee2003' on page 7 undefined on input line 196.
+LaTeX Warning: Citation 'Mahaffee2003' on page 7 undefined on input line 197.
 
 
-LaTeX Warning: Citation 'Ocamb1999' on page 7 undefined on input line 196.
+LaTeX Warning: Citation 'Ocamb1999' on page 7 undefined on input line 197.
 
 
-LaTeX Warning: Citation 'Gent2019b' on page 7 undefined on input line 196.
+LaTeX Warning: Citation 'Gent2019b' on page 7 undefined on input line 197.
 
 
-LaTeX Warning: Citation 'Turechek2001' on page 7 undefined on input line 196.
+LaTeX Warning: Citation 'Turechek2001' on page 7 undefined on input line 197.
 
 
-LaTeX Warning: Citation 'Gent2019a' on page 7 undefined on input line 196.
+LaTeX Warning: Citation 'Gent2019a' on page 7 undefined on input line 197.
 
 
-LaTeX Warning: Citation 'Laurie2023' on page 7 undefined on input line 196.
+LaTeX Warning: Citation 'Laurie2023' on page 7 undefined on input line 197.
 
 
-LaTeX Warning: Citation 'Turechek2001' on page 7 undefined on input line 200.
+LaTeX Warning: Citation 'Turechek2001' on page 7 undefined on input line 201.
 
 
-LaTeX Warning: Citation 'Gent2019a' on page 7 undefined on input line 200.
+LaTeX Warning: Citation 'Gent2019a' on page 7 undefined on input line 201.
 
 
-LaTeX Warning: Citation 'Laurie2023' on page 7 undefined on input line 200.
+LaTeX Warning: Citation 'Laurie2023' on page 7 undefined on input line 201.
 
 
-LaTeX Warning: Citation 'Turechek2001' on page 7 undefined on input line 200.
+LaTeX Warning: Citation 'Turechek2001' on page 7 undefined on input line 201.
 
 
-LaTeX Warning: Citation 'Turechek2004' on page 7 undefined on input line 200.
+LaTeX Warning: Citation 'Turechek2004' on page 7 undefined on input line 201.
 
 
-LaTeX Warning: Citation 'Padgitt-Cobb2019' on page 7 undefined on input line 202.
+LaTeX Warning: Citation 'Padgitt-Cobb2019' on page 7 undefined on input line 203.
 
 
-LaTeX Warning: Citation 'Wolfenbarger2016' on page 7 undefined on input line 202.
+LaTeX Warning: Citation 'Wolfenbarger2016' on page 7 undefined on input line 203.
 
 [7]
 
-LaTeX Warning: Citation 'Gent2019a' on page 8 undefined on input line 204.
+LaTeX Warning: Citation 'Gent2019a' on page 8 undefined on input line 205.
 
 
-LaTeX Warning: Citation 'Wolfenbarger2016' on page 8 undefined on input line 204.
+LaTeX Warning: Citation 'Wolfenbarger2016' on page 8 undefined on input line 205.
 
 
-LaTeX Warning: Citation 'hwang_what_2024' on page 8 undefined on input line 208.
+LaTeX Warning: Citation 'hwang_what_2024' on page 8 undefined on input line 209.
 
 [8]
 File: figures/network_sampled_nodes_centrality_quantiles.png Graphic file (type bmp)
 <figures/network_sampled_nodes_centrality_quantiles.png>
 
 
-LaTeX Warning: Reference `eq:1' on page 9 undefined on input line 223.
+LaTeX Warning: Reference `eq:1' on page 9 undefined on input line 224.
 
 
-LaTeX Warning: Reference `eq:1' on page 9 undefined on input line 223.
+LaTeX Warning: Reference `eq:1' on page 9 undefined on input line 224.
 
 
-LaTeX Warning: Reference `fig:network_sampled' on page 9 undefined on input line 227.
+LaTeX Warning: Reference `fig:network_sampled' on page 9 undefined on input line 228.
 
 
-LaTeX Warning: Citation 'Gent2019a' on page 9 undefined on input line 227.
+LaTeX Warning: Citation 'Gent2019a' on page 9 undefined on input line 228.
 
 [9

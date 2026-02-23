@@ -54,6 +54,7 @@
 \usepackage{csquotes}       % Include csquotes
 \usepackage{diagbox}
 \usepackage{tikz}
+\usepackage{pifont} % For \ding checkmark/cross symbols
 
 % Comment out blocks of text
 \usepackage{comment}
@@ -138,7 +139,7 @@ We use hop powdery mildew as a motivating pathosystem to develop a coupled epide
 METHODS
 We parameterized the model using data collected from a census survey of commercial hop yards in Oregon during 2014 to 2017, including the monthly incidence of plants with powdery mildew, fungicides applied by growers, and estimated revenue depending on how the incidence of diseased hop cones affects yield and the likelihood of crop devaluation. We show that conditions in the early stages of epidemics related to primary inoculum dose, pathogen diversity, and the intensity of management intervention interact and determine the optimal regional control strategy. 
 RESULTS AND CONCLUSIONS
-As the likelihood of primary infection increases, due to either the dose of primary inoculum or virulence of the pathogen population, mean profitability decreases. These effects are most pronounced when primary infection occurs in yards that are most central in the disease transmission network. The choice of how many fungicide applications to make in response to initial infection has little effect on profitability when the primary inoculum is relatively infrequent. However, as primary inoculum increases, targeted fungicide applications made in the early stages of epidemics are essential for maximizing profitability region-wide. These principles hold across a range of market demand scenarios that change crop quality standards, even though relative profit losses increase under low demand conditions. 
+As the likelihood of primary infection increases, due to either the dose of primary inoculum or virulence of the pathogen population, mean profitability decreases. These effects are most pronounced when primary infection occurs in yards that are most central in the disease transmission network. The choice of how many fungicide applications to make in response to initial infection has little effect on profitability when the primary inoculum is relatively infrequent. However, as primary inoculum increases, targeted fungicide applications made in the early stages of epidemics are essential for maximizing profitability region-wide. \replaced{These principles hold across a range of market demand scenarios that impose different crop quality standards, with the optimal number of early-season fungicide applications remaining largely consistent despite substantially different crop prices. The magnitude of profit losses is greatest under high market demand, reflecting higher per-unit crop value and more severe revenue penalties from quality defects.}{These principles hold across a range of market demand scenarios that change crop quality standards, even though relative profit losses increase under low demand conditions.} 
 SIGNIFICANCE
 Our analysis addresses a multifaceted challenge in agricultural disease management where epidemic control decisions must account for interactions between pathogen biology, management practices, market conditions, and regional-scale disease transmission. This research provides a framework for formally understanding factors that influence the cost of disease in complex agricultural systems where pathogens disperse across management units.
 \end{abstract}
@@ -457,17 +458,13 @@ Quantitatively, in the high-demand scenario for $p_0 = 10^{-2}$ and 100\% \texti
 
 \subsubsection{Influence of \replaced{out-degree centrality}{degree-centrality} of initial inoculum}
 
-\replaced{The out-degree centrality quantile of the initially infected yards influenced profit outcomes because yards with higher weighted out-degree centrality have greater potential to transmit inoculum across the landscape via wind-mediated spore dispersal. In the simulation, the weighted out-degree of each yard was computed from the directed transmission network as the sum of edge weights to all other yards, where each edge weight reflects the source yard area, directional wind run, and the inverse-power-law decay of distance (Equation \ref{eq:1}). Yards were then classified into five quantiles based on this centrality measure, and in each scenario initial infections (flag shoots) were placed exclusively in yards belonging to a single quantile while adjusting $p_0$ so that the expected landscape-wide number of initial infections remained comparable across quantiles.
+\replaced{Profit losses increased monotonically with the out-degree centrality quantile of initially infected yards. Under high demand at $p_0 = 10^{-2}$ with 100\% \textit{V6} and no sprays, losses ranged from $-6.7$\% (Q1, lowest) to $-10.7$\% (Q5, highest), with the steepest increase between Q1 and Q2 ($2.5$ percentage points) and progressively smaller increments thereafter. This pattern was consistent across all four years, with the Q1--Q5 gap ranging from $3.6$ to $4.4$ percentage points. The centrality effect depended strongly on pathogen diversity: at 0\% \textit{V6} the gap was only $0.4$ percentage points ($-2.9$\% vs.\ $-3.3$\%), but it widened to $4.0$ percentage points at 100\% \textit{V6} as the expanded susceptible host pool enabled highly connected yards to propagate disease more effectively.
 
-Under high demand at $p_0 = 10^{-2}$ with 100\% \textit{V6} and no sprays, profit losses increased monotonically across quantiles: $-6.7$\% (Q1, lowest), $-9.2$\% (Q2), $-9.7$\% (Q3), $-10.3$\% (Q4), and $-10.7$\% (Q5, highest). The steepest increase occurred between Q1 and Q2 ($2.5$ percentage points), with progressively smaller increments at higher quantiles, indicating that the transition from the least-connected to moderately-connected yards had the largest marginal effect on epidemic amplification. This non-linear pattern was consistent across all four years, with the centrality gap between Q1 and Q5 ranging from $3.6$ to $4.4$ percentage points.
-
-The interaction between out-degree centrality and pathogen diversity was pronounced. When the pathogen population contained no \textit{V6}-virulent strains (0\% \textit{V6}), the centrality gap was negligible ($-2.9$\% at Q1 vs.\ $-3.3$\% at Q5, a difference of only $0.4$ percentage points), because only cultivars lacking \textit{R6} resistance could be infected, limiting epidemic amplification through the network regardless of yard connectivity. As \textit{V6} proportion increased to 100\%, the centrality gap widened to $4.0$ percentage points, reflecting the expanded pool of susceptible hosts that enabled highly connected yards to propagate disease more effectively.
-
-The centrality gap also depended on fungicide management in a non-monotonic manner. From the no-spray baseline ($4.0$ pp gap), the gap initially widened at 1 spray ($5.8$ pp) because a single fungicide application was sufficient to suppress the epidemic in low-centrality yards but insufficient in high-centrality yards where the greater number of outgoing transmission pathways sustained the epidemic. With increasing sprays, the gap narrowed progressively: to $2.5$ pp at 3 sprays and $1.2$ pp at 5 sprays, where losses were $-3.2$\% (Q1) vs.\ $-4.3$\% (Q5). This convergence indicates that adequate fungicide management can largely neutralize the disadvantage of initial infections occurring in highly connected yards.}{The location of initial infections, as measured by the degree-centrality quantile of initially infected yards, impacted profitability, particularly under high inoculum pressure scenarios. Initial infections in yards in high degree-centrality quantiles were more detrimental, exacerbating the spread and subsequent economic losses across the region. For example, in the high-demand scenario at $p_0 = 10^{-2}$, 0 sprays led to losses of -10\% to -12\% in the most central yards, compared to -6\% to -8\% when the initial infections occurred in the yards in the lowest degree-centrality quantile.}
+The interaction between centrality and fungicide management was non-monotonic. From the no-spray baseline ($4.0$ pp gap), the gap initially widened at 1 spray ($5.8$ pp) because a single application suppressed the epidemic in low-centrality yards but was insufficient in high-centrality yards with more outgoing transmission pathways. With additional sprays the gap narrowed to $2.5$ pp at 3 sprays and $1.2$ pp at 5 sprays ($-3.2$\% at Q1 vs.\ $-4.3$\% at Q5), indicating that adequate fungicide management can largely neutralize the disadvantage of initial infections in highly connected yards.}{The location of initial infections, as measured by the degree-centrality quantile of initially infected yards, impacted profitability, particularly under high inoculum pressure scenarios. Initial infections in yards in high degree-centrality quantiles were more detrimental, exacerbating the spread and subsequent economic losses across the region. For example, in the high-demand scenario at $p_0 = 10^{-2}$, 0 sprays led to losses of -10\% to -12\% in the most central yards, compared to -6\% to -8\% when the initial infections occurred in the yards in the lowest degree-centrality quantile.}
 
 \subsubsection{Market demand conditions}
 
-\replaced{Market demand conditions shifted the magnitude of profit losses and, in some cases, the optimal management strategy. Under high demand, the worst-case loss (no sprays, $p_0 = 10^{-2}$, 100\% \textit{V6}, highest out-degree centrality quantile) was $-10.7$\%, compared to $-4.2$\% under moderate demand and $-2.2$\% under low demand. High market demand amplified the value of fungicide intervention: 5 sprays reduced worst-case losses from $-10.7$\% to $-4.3$\% under high demand, whereas under low demand the reduction was from $-2.2$\% to $-1.0$\%. The optimal number of sprays also depended on demand level; under low demand, 4 sprays was optimal ($-1.0$\%), while under high and moderate demand, 5 sprays minimized losses ($-4.3$\% and $-1.8$\%, respectively). The greater sensitivity of profit to disease under high demand reflects the higher per-unit crop value and the consequent larger revenue penalty from quality defects. These patterns were consistent across all four years of the study period (Supplemental Figures \ref{fig:profit_2015}, \ref{fig:profit_2016}, and \ref{fig:profit_2017}).}{Different market demand conditions notably influenced the relative change in profit. Under high market demand conditions, the impact of each additional early fungicide interventions had a marked effect, reflecting the marginal value of crop damage prevented. Under severe epidemic conditions profitability was more impacted under low demand scenarios.  For example, under severe epidemic conditions when $p_0$ = 0.01, relative profit was less impacted by under-spraying  under moderate (-8\%) versus low (-12\%) market demand conditions. The greater loss of profit under the low market demand scenario reflects the cost of more stringent crop quality standards, despite the lower per unit price.  These patterns were consistent across all four years of the study period (Supplemental Figures \ref{fig:profit_2015}, \ref{fig:profit_2016}, and \ref{fig:profit_2017}).}
+\replaced{Market demand conditions shifted the magnitude of profit losses and, in some cases, the optimal management strategy. Under the most severe epidemic conditions without sprays, losses declined from $-10.7$\% under high demand to $-4.2$\% under moderate and $-2.2$\% under low demand. At the optimum, 5 sprays minimized losses under high ($-4.3$\%) and moderate ($-1.8$\%) demand, while 4 sprays was sufficient under low demand ($-1.0$\%). The greater sensitivity of profit to disease under high demand reflects the higher per-unit crop value and the consequent larger revenue penalty from quality defects. These patterns were consistent across all four years of the study period (Supplemental Figures \ref{fig:profit_2015}, \ref{fig:profit_2016}, and \ref{fig:profit_2017}).}{Different market demand conditions notably influenced the relative change in profit. Under high market demand conditions, the impact of each additional early fungicide interventions had a marked effect, reflecting the marginal value of crop damage prevented. Under severe epidemic conditions profitability was more impacted under low demand scenarios.  For example, under severe epidemic conditions when $p_0$ = 0.01, relative profit was less impacted by under-spraying  under moderate (-8\%) versus low (-12\%) market demand conditions. The greater loss of profit under the low market demand scenario reflects the cost of more stringent crop quality standards, despite the lower per unit price.  These patterns were consistent across all four years of the study period (Supplemental Figures \ref{fig:profit_2015}, \ref{fig:profit_2016}, and \ref{fig:profit_2017}).}
 
 % \textbf{Summary Table of Key Quantitative Results (2014):}
 
@@ -486,15 +483,21 @@ The centrality gap also depended on fungicide management in a non-monotonic mann
 
 \section{Discussion}
 
-Our analysis addresses a multifaceted challenge in agricultural disease management where epidemic control decisions must account for complex interactions between pathogen biology, management practices, market conditions, and regional-scale disease transmission. Our motivating pathosystem represents a complex scenario for economic epidemiology, combining the spread of a highly dispersible pathogen capable of long-distance transmission, potential damage to both yield and quality metrics, market-sensitive quality standards, and strain-specific cultivar resistance in a heterogeneous landscape of host connectivity. This complexity necessitates a modeling approach that simultaneously captures network-scale disease transmission, multi-dimensional crop damage functions, and market-dependent economic outcomes. Three key findings emerge from our simulations. First, epidemic control is exquisitely sensitive to conditions in the earliest stages of outbreaks, with relatively small changes in initial inoculum dose and early-season fungicide applications translating to substantial economic differences. Second, there appears to exist a critical threshold in pathogen pressure below which intensive management becomes unnecessary, suggesting opportunities for area-wide interventions targeting primary inoculum reduction. Third, quality-sensitive market conditions paradoxically drive more intensive fungicide use under depressed demand scenarios, challenging traditional economic injury level concepts when crop value is tied to quality standards rather than yield alone.
+Our analysis addresses a multifaceted challenge in agricultural disease management where epidemic control decisions must account for complex interactions between pathogen biology, management practices, market conditions, and regional-scale disease transmission. Our motivating pathosystem represents a complex scenario for economic epidemiology, combining the spread of a highly dispersible pathogen capable of long-distance transmission, potential damage to both yield and quality metrics, market-sensitive quality standards, and strain-specific cultivar resistance in a heterogeneous landscape of host connectivity. This complexity necessitates a modeling approach that simultaneously captures network-scale disease transmission, multi-dimensional crop damage functions, and market-dependent economic outcomes.
+
+\replaced{Three key findings emerge from our simulations. First, there exists a critical threshold in initial inoculum pressure (approximately $p_0 = 10^{-4}$) below which economic losses are negligible regardless of management, but above which profitability becomes acutely sensitive to early-season fungicide timing and intensity, suggesting opportunities for area-wide interventions targeting primary inoculum reduction. Second, above this threshold, the economic impact of disease is modulated by the network position of initially infected yards and pathogen diversity, with initial infections in highly connected yards and virulent strains amplifying losses and requiring more intensive intervention. Third, quality-sensitive market conditions sustain near-maximum fungicide intensity even under low demand, with the optimal spray count falling by only one application despite substantially lower crop prices, challenging traditional economic injury level concepts when crop value is tied to quality standards rather than yield alone.}{Three key findings emerge from our simulations. First, epidemic control is exquisitely sensitive to conditions in the earliest stages of outbreaks, with relatively small changes in initial inoculum dose and early-season fungicide applications translating to substantial economic differences. Second, there appears to exist a critical threshold in pathogen pressure below which intensive management becomes unnecessary, suggesting opportunities for area-wide interventions targeting primary inoculum reduction. Third, quality-sensitive market conditions paradoxically drive more intensive fungicide use under depressed demand scenarios, challenging traditional economic injury level concepts when crop value is tied to quality standards rather than yield alone.}
 
 \subsection{Early intervention and threshold effects}
 
-One of the most striking findings from our simulations is the threshold-like response in simulated optimal control strategies as initial inoculum probability increases. When the initial probability of disease remained below $10^{-4}$, economic losses were minimal regardless of fungicide application intensity, pathogen strain diversity, or initial infection location. Above this threshold, however, the system exhibited dramatic sensitivity to early-season intervention, with the optimal number of fungicide applications in the first month becoming the dominant factor determining economic outcomes. This pattern aligns with theoretical predictions for epidemics where containment efficiency depends critically on early-stage contact rates and intervention timing \parencite{Margosian2009, Severns2019}. For spatially-explicit epidemics with long-distance dispersal capabilities, small changes in primary inoculum can cascade through the transmission network, leading to nonlinear responses in final epidemic size \parencite{Cunniffe2015}. Epidemic threshold behavior has been documented across diverse host-pathogen systems, from livestock diseases \parencite{Hartfield2013} to forest pathogens \parencite{Lofgren2014}. Similarly, the sensitivity to early intervention aligns with the "golden hour" concept in human disease outbreak response, where rapid action in the initial stages determines overall outbreak severity \parencite{Fraser2004}. In most susceptible-infected-recovered (SIR) epidemic models, there is a critical value of $R_0$ below which epidemics cannot occur \parencite{Keeling2007, Diekmann2008}. The critical value of $R_0$ depends on transmission and recovery dynamics, but also the structure of the host population and mixing of healthy and infected individuals. Calculation of a threshold $R_0$ becomes increasingly difficult with more complex epidemic models. Thresholds occur not only for epidemic development, but also for management intervention in social dilemma problems, such as collective action in the form of area-wide pest management \parencite{Lence2022, Garcia-Figuera2024}. Identifying participation thresholds in complex social-ecological systems is not trivial, and often participation thresholds for successful area-wide pest management are unknown due to uncertainty on factors such as transmission dynamics of the pathogen or vector, heterogeneity in host connectivity, and efficacy of the intervention effort at different scales \parencite{Garcia-Figuera2024}. Our simulation experiments with a time-transition epidemic model suggest that there exists a primary inoculum threshold effect in the motivating pathosystem and, very likely, other pathosystems where epidemics are the result of inoculum and intervention efforts that influence disease spread both within and among management units. We expect that the observed initial inoculum threshold results from the specific combination of pathogen transmission and landscape connectivity idiosyncratic to the specific conditions in the motivating pathosystem. How these specific factors influence the dynamics of landscape-level epidemics is an obvious area for future investigation.
+One of the most striking findings from our simulations is the threshold-like response in simulated optimal control strategies as initial inoculum probability increases. When the initial probability of disease remained below $10^{-4}$, economic losses were minimal regardless of fungicide application intensity, pathogen strain diversity, or initial infection location. Above this threshold, however, the system exhibited dramatic sensitivity to early-season intervention, with the optimal number of fungicide applications in the first month becoming the dominant factor determining economic outcomes. This pattern aligns with theoretical predictions for epidemics where containment efficiency depends critically on early-stage contact rates and intervention timing \parencite{Margosian2009, Severns2019}. For spatially-explicit epidemics with long-distance dispersal capabilities, small changes in primary inoculum can cascade through the transmission network, leading to nonlinear responses in final epidemic size \parencite{Cunniffe2015}. Epidemic threshold behavior has been documented across diverse host-pathogen systems, from livestock diseases \parencite{Hartfield2013} to forest pathogens \parencite{Lofgren2014}. Similarly, the sensitivity to early intervention aligns with the "golden hour" concept in human disease outbreak response, where rapid action in the initial stages determines overall outbreak severity \parencite{Fraser2004}.
+
+In most susceptible-infected-recovered (SIR) epidemic models, there is a critical value of $R_0$ below which epidemics cannot occur \parencite{Keeling2007, Diekmann2008}. The critical value of $R_0$ depends on transmission and recovery dynamics, but also the structure of the host population and mixing of healthy and infected individuals. Calculation of a threshold $R_0$ becomes increasingly difficult with more complex epidemic models. Thresholds occur not only for epidemic development, but also for management intervention in social dilemma problems, such as collective action in the form of area-wide pest management \parencite{Lence2022, Garcia-Figuera2024}. Identifying participation thresholds in complex social-ecological systems is not trivial, and often participation thresholds for successful area-wide pest management are unknown due to uncertainty on factors such as transmission dynamics of the pathogen or vector, heterogeneity in host connectivity, and efficacy of the intervention effort at different scales \parencite{Garcia-Figuera2024}.
+
+Our simulation experiments with a time-transition epidemic model suggest that there exists a primary inoculum threshold effect in the motivating pathosystem and, very likely, other pathosystems where epidemics are the result of inoculum and intervention efforts that influence disease spread both within and among management units. We expect that the observed initial inoculum threshold results from the specific combination of pathogen transmission and landscape connectivity idiosyncratic to the specific conditions in the motivating pathosystem. How these specific factors influence the dynamics of landscape-level epidemics is an obvious area for future investigation.
 
 Our study indicates that epidemic mitigation may not require intensive early-season intervention when the primary inoculum at the landscape level is sufficiently low. Indeed, we observed that a 10-fold reduction in initial inoculum from the levels observed in practice \parencite{Gent2018} could largely eliminate economic damage from powdery mildew industry-wide. Further work is needed to understand whether area-wide interventions targeting primary inoculum reduction may be more cost-effective than field-level fungicide intensification. This might involve strategic deployment of cultural control measures or host resistance that is race-nonspecific.
 
-When the primary inoculum dose is not limiting, we show it is possible to calibrate intervention efforts to observed or expected primary inoculum dose and location. More intensive early-season intervention is warranted when primary inoculum occurs in individual fields that are more highly connected in the disease transmission network or when the initial infections are caused by virulent strains that can infect more cultivars. The importance of intervention in highly connected nodes is well established in network epidemiology across physical and biological systems \parencite{Pastor-Satorras2001, Cross2005}. Minimizing economic loss was sensitive to the number of fungicide applications made in the earliest stage of epidemics, and this was particularly the case when primary inoculum first occurred in the most highly connected yards. In our analysis, under severe epidemic conditions ($p_0 = 10^{-2}$ and 100\% \textit{V6 }strain under high market demand), achieving a similar economic outcome required four more fungicide applications in the first month of epidemics when primary inoculum was concentrated in the most connected yards versus the least connected in the network. We observed similar changes in the optimal simulated number of fungicide applications when the pathogen population increased from a single, less virulent strain to entirely a more virulent strain that could infect all cultivars. \replaced{Out-degree centrality}{Degree centrality} is calculated from yard size, distance to other yards, and average wind run, features that are known or can be estimated prior to epidemic development. In some instances, pathogen virulence may be known with certainty depending on which cultivar develops disease \parencite{Gent2019}. Given this, one may estimate the management units that we predict are most critical for disease spread and therefore prioritize intensivized management efforts prior to or in the earliest stages of a disease outbreak.
+When the primary inoculum dose is not limiting, we show it is possible to calibrate intervention efforts to observed or expected primary inoculum dose and location. More intensive early-season intervention is warranted when primary inoculum occurs in individual fields that are more highly connected in the disease transmission network or when the initial infections are caused by virulent strains that can infect more cultivars. The importance of intervention in highly connected nodes is well established in network epidemiology across physical and biological systems \parencite{Pastor-Satorras2001, Cross2005}. Minimizing economic loss was sensitive to the number of fungicide applications made in the earliest stage of epidemics, and this was particularly the case when primary inoculum first occurred in the most highly connected yards. \replaced{In our analysis, under severe epidemic conditions ($p_0 = 10^{-2}$ and 100\% \textit{V6} strain under high market demand), the optimal number of early-season fungicide applications was up to two higher when primary inoculum was concentrated in the most connected yards versus the least connected in the network, and even at the optimal spray level the most connected yards still incurred greater losses ($-4.3$\% vs.\ $-3.1$\%).}{In our analysis, under severe epidemic conditions ($p_0 = 10^{-2}$ and 100\% \textit{V6 }strain under high market demand), achieving a similar economic outcome required four more fungicide applications in the first month of epidemics when primary inoculum was concentrated in the most connected yards versus the least connected in the network.} We observed similar changes in the optimal simulated number of fungicide applications when the pathogen population increased from a single, less virulent strain to entirely a more virulent strain that could infect all cultivars. \added{Notably, a single early-season fungicide application can be counterproductive in this context: it may suppress disease in less-connected yards while providing a false sense of adequate control in high-centrality yards where the epidemic persists through numerous transmission pathways, temporarily widening the disparity in outcomes across the network. Only with sustained fungicide pressure does this disparity narrow, eventually equalizing outcomes across centrality quantiles.} \replaced{Out-degree centrality}{Degree centrality} is calculated from yard size, distance to other yards, and average wind run, features that are known or can be estimated prior to epidemic development. In some instances, pathogen virulence may be known with certainty depending on which cultivar develops disease \parencite{Gent2019}. Given this, one may estimate the management units that we predict are most critical for disease spread and therefore prioritize intensivized management efforts prior to or in the earliest stages of a disease outbreak.
 
 \subsection{Market sensitivity and economic injury level paradigms}
 
@@ -508,7 +511,7 @@ This pattern reflects a broader challenge in crops where farm profit depends on 
 
 Several limitations should be considered when interpreting our results. We recognized that the damage functions linking disease incidence to cone color and subsequent price adjustments rely on relationships derived from literature rather than direct observation. This may introduce uncertainty in the precise magnitude of the economic effects we estimate in the damage functions. However, the directional and relative importance of the epidemic factors and management interventions we report remain valid. Ambiguous language in production contracts is problematic and also complicates model parameterization, but there are no easy solutions to this problem. Indeed, this may be the largest source of uncertainty in our modeling and also one of the most difficult to model precisely.
 
-We focused on annual profit maximization at the landscape-level as our outcome of interest. This may be appropriate for producers with productivist ideology \parencite{Mcdowell2018} but ignores grower risk aversion and externalities whose costs are not borne directly by producers. We also do not identify the optimal strategy for an individual grower or an individual yard. Many other production or environmental objectives could be considered, and at time steps longer than a single crop year. Nonetheless, the coupled epidemiological-economic modeling framework we developed provides a foundation for analyzing other production objections or interventions in complex pathosystems and production scenarios. \added{Extensions to the model to accommodate more complex pathogen race structure are possible, which may be informative since a third pathogen race has evolved since the original data acquisition \parencite{Gent2017} . We expect the overall findings of this research will hold across more complex patterns of pathogen virulence conditioned by \textit{R}-genes that provide qualitative resistance.}
+We focused on annual profit maximization at the landscape-level as our outcome of interest. This may be appropriate for producers with productivist ideology \parencite{Mcdowell2018} but ignores grower risk aversion and externalities whose costs are not borne directly by producers. We also do not identify the optimal strategy for an individual grower or an individual yard. Many other production or environmental objectives could be considered, and at time steps longer than a single crop year. Nonetheless, the coupled epidemiological-economic modeling framework we developed provides a foundation for analyzing other production objections or interventions in complex pathosystems and production scenarios. \added{Additionally, our optimization is partial: only early-season (May) fungicide applications are treated as decision variables, while later-season sprays follow deterministically from the fitted model based on observed disease state, meaning the full seasonal spray program is not jointly optimized. The proportion of \textit{V6}-virulent strains is also held uniform across all yards within a given simulation run, whereas in practice strain composition likely varies spatially and may shift over the course of a season.} \added{Extensions to the model to accommodate more complex pathogen race structure are possible, which may be informative since a third pathogen race has evolved since the original data acquisition \parencite{Gent2017} . We expect the overall findings of this research will hold across more complex patterns of pathogen virulence conditioned by \textit{R}-genes that provide qualitative resistance.}
 
 \section*{Acknowledgements}
 
@@ -616,70 +619,136 @@ Each model was fitted using the Generalized Linear Model (GLM) implementation in
 
 \subsection{Susceptibility adjustment for initial infection probability}\label{sec:susceptibility_adjustment}
 
-In our simulation framework, initial infections (flag shoots) are placed exclusively in yards belonging to a single out-degree centrality quantile $q$ in each scenario. Because yards within a given quantile differ in their susceptibility to the initial strain of the pathogen, and because each quantile contains only a fraction of the total yards in the landscape, the raw initial probability $p_0$ must be adjusted to ensure that the expected landscape-wide number of initial infections is comparable across quantiles and strain scenarios.
+% -------------------------------------------------------------------
+% NUMERICAL EXAMPLE (verifying the TikZ diagram scaling)
+%
+% Suppose: N = 100 yards, n = 100 plants per yard, giving 10,000 total plants.
+% Quantiles each contain P_q = 0.2 of yards, so 20 yards per quantile.
+% With no V6 strains, S_q = tI2_bar × (1 + 0) ≈ 0.5 (half the cultivars lack R6).
+% Let p_0 = 0.01, so the target is 0.01 × 10,000 = 100 flag shoots landscape-wide.
+%
+% WITHOUT adjustment (using p_0 = 0.01 directly in binomial draw):
+%   Binomial draws in the 20 selected-quantile yards: E = 20 × 100 × 0.01 = 20
+%   After zeroing non-susceptible yards (~50%):        E ≈ 10 flag shoots
+%   Result: 10 flag shoots — 10× fewer than the target of 100.
+%
+% WITH adjustment (p* = 0.01 / (0.5 × 0.2) = 0.10):
+%   Binomial draws in the 20 selected-quantile yards: E = 20 × 100 × 0.10 = 200
+%   After zeroing non-susceptible yards (~50%):        E ≈ 100 flag shoots
+%   Result: 100 flag shoots — matches the landscape-wide target.
+% -------------------------------------------------------------------
 
-The adjustment proceeds as follows. Let $\mathcal{P}_q$ denote the proportion of yards in quantile $q$, and let $\mathcal{S}_q$ denote the effective proportion of susceptible plants in that quantile. The latter depends on both the cultivar composition (specifically the fraction of cultivars lacking \textit{R6} resistance) and the proportion of yards carrying the \textit{V6}-virulent strain in a given simulation run:
+In our simulation framework, initial infections (flag shoots) are placed exclusively in yards belonging to a single out-degree centrality quantile $q$ in each scenario. For each yard in the selected quantile, we draw the number of flag shoots from a binomial distribution with some probability $p$; flag shoots drawn in yards that are biologically incompatible with the initial pathogen strain are then set to zero. Because the selected quantile contains only a fraction of all yards, and only a fraction of those yards are susceptible, using the raw probability $p_0$ directly would produce far fewer flag shoots than the intended landscape-wide target. The adjustment derived below corrects for both of these effects.
+
+\paragraph{Goal.} We require that the expected total number of flag shoots surviving the zeroing step equal $p_0$ times the total number of plants:
+
+$$E[\text{total surviving flag shoots}] \;=\; p_0 \cdot N \cdot n,$$
+
+\noindent where $N$ is the number of yards and $n$ is the number of plants per yard.
+
+\paragraph{Correction 1: quantile size.} In each scenario, only yards in quantile $q$ can receive flag shoots; yards outside this quantile are zeroed out. Let $\mathcal{P}_q$ denote the proportion of yards in quantile $q$. Because the draw is restricted to $\mathcal{P}_q \cdot N$ yards instead of all $N$, the probability must be scaled up by $1/\mathcal{P}_q$ to preserve the expected total.
+
+\paragraph{Correction 2: susceptibility.} Within the selected quantile, only a fraction $\mathcal{S}_q$ of yards are susceptible to the initial strain. Flag shoots drawn in non-susceptible yards are set to zero after the draw. Therefore the probability must be further scaled by $1/\mathcal{S}_q$. The susceptibility fraction is:
 
 \begin{equation}
 \mathcal{S}_q = \overline{tI2}_q \cdot (1 + \overline{V6}_q)
 \label{eq:susceptibility}
 \end{equation}
 
-\noindent where $\overline{tI2}_q$ is the mean fraction of non-\textit{R6} cultivars (susceptible to all strains) in quantile $q$, and $\overline{V6}_q$ is the fraction of yards in that quantile in which the \textit{V6}-virulent strain is present. When $\overline{V6}_q = 0$ (no \textit{V6}-virulent strains), only cultivars lacking \textit{R6} are susceptible, so $\mathcal{S}_q \approx 0.5$ given the approximately 1:1 cultivar ratio. When $\overline{V6}_q = 1$ (all yards carry the \textit{V6}-virulent strain), all cultivars become susceptible regardless of \textit{R6} status, so $\mathcal{S}_q \approx 1.0$.
+\noindent where $\overline{tI2}_q$ is the mean fraction of non-\textit{R6} cultivars (susceptible to all strains) in quantile $q$, and $\overline{V6}_q$ is the fraction of yards in that quantile carrying the \textit{V6}-virulent strain. The $(1 + \overline{V6}_q)$ term accounts for the fact that \textit{V6}-virulent strains can also infect cultivars with \textit{R6} resistance, effectively doubling the susceptible host pool when $\overline{V6}_q = 1$. At the two extremes: when $\overline{V6}_q = 0$, only non-\textit{R6} cultivars are susceptible, so $\mathcal{S}_q \approx 0.5$; when $\overline{V6}_q = 1$, all cultivars are susceptible, so $\mathcal{S}_q \approx 1.0$.
 
-The adjusted initial probability for quantile $q$ is then:
+\paragraph{Combined adjustment.} Applying both corrections yields the adjusted initial probability:
 
 \begin{equation}
 p_0^{\ast}(q) = p_0 \cdot \frac{1}{\mathcal{S}_q} \cdot \frac{1}{\mathcal{P}_q}
 \label{eq:adjusted_p0}
 \end{equation}
 
-The factor $1/\mathcal{P}_q$ compensates for placing all initial infections in a single quantile rather than across the entire landscape, and $1/\mathcal{S}_q$ compensates for the fact that only susceptible plants within the quantile can harbour flag shoots. Together, these adjustments ensure that the expected total number of initial infections at the landscape scale remains proportional to $p_0$ regardless of which quantile or strain scenario is simulated. Figure \ref{fig:susceptibility_adjustment} illustrates this process schematically.
+\noindent Substituting back, the expected number of surviving flag shoots is:
+
+$$\underbrace{\mathcal{P}_q \cdot N}_{\text{yards in }q} \;\cdot\; \underbrace{\mathcal{S}_q}_{\substack{\text{frac.\ }\\\text{susceptible}}} \;\cdot\; n \;\cdot\; \underbrace{p_0 \cdot \frac{1}{\mathcal{S}_q} \cdot \frac{1}{\mathcal{P}_q}}_{p_0^{\ast}(q)} \;=\; p_0 \cdot N \cdot n,$$
+
+\noindent confirming that the adjustment recovers the landscape-wide target regardless of which quantile or strain scenario is simulated. Figure \ref{fig:susceptibility_adjustment} contrasts the expected flag shoot counts with and without this adjustment.
 
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}[
     arrow/.style={->, thick, >=stealth},
+    box/.style={draw, rounded corners, minimum height=0.7cm, align=center, font=\small},
+    resultgood/.style={box, fill=green!20, minimum width=5.8cm},
+    resultbad/.style={box, fill=red!15, minimum width=5.8cm},
+    stepbox/.style={box, fill=gray!8, minimum width=5.8cm},
 ]
 
-% Title
-\node[font=\bfseries] at (5.5, 4.5) {Susceptibility Adjustment for Initial Infection Probability};
+% ── Shared top: Landscape ──
+\node[font=\bfseries] at (5.5, 7.8) {Susceptibility Adjustment for Initial Infection Probability};
 
-% Step 1: Full landscape
-\node[font=\small\bfseries, anchor=west] at (-0.3, 3.5) {Step 1: Landscape divided into out-degree centrality quantiles};
+\node[font=\small\bfseries, anchor=west] at (-0.4, 7.0) {Landscape};
 \foreach \i/\qlabel in {0/Q1, 1/Q2, 2/Q3, 3/Q4, 4/Q5} {
-    \draw[thick] (\i*2.2, 2.0) rectangle (\i*2.2+2, 3.0);
-    \node[font=\small] at (\i*2.2+1, 2.5) {\qlabel};
-    \node[font=\scriptsize] at (\i*2.2+1, 2.15) {$\mathcal{P}_q \approx 0.2$};
+    \draw[thick] (\i*2.2, 6.0) rectangle (\i*2.2+2, 6.7);
+    \node[font=\small] at (\i*2.2+1, 6.35) {\qlabel};
 }
+\node[font=\scriptsize, anchor=west] at (0, 5.65) {$N$ yards, $n$ plants/yard \quad$\Rightarrow$\quad target $= p_0 \cdot N \cdot n$ flag shoots};
 
 % Highlight Q3
-\draw[very thick, blue] (4.4, 2.0) rectangle (6.4, 3.0);
-\node[font=\footnotesize, blue, anchor=south] at (5.4, 3.0) {Selected quantile};
+\draw[very thick, blue!70!black] (4.4, 6.0) rectangle (6.4, 6.7);
+\node[font=\footnotesize, blue!70!black, anchor=south] at (5.4, 6.7) {Selected quantile $q$};
 
-% Arrow down
-\draw[arrow, blue] (5.4, 1.9) -- (5.4, 1.0);
+% ── Branch arrows ──
+\draw[arrow] (3.5, 5.4) -- (2.2, 4.8) node[midway, above left, font=\scriptsize] {};
+\draw[arrow] (7.5, 5.4) -- (8.8, 4.8) node[midway, above right, font=\scriptsize] {};
 
-% Step 2: Zoomed quantile
-\node[font=\small\bfseries, anchor=west] at (-0.3, 0.7) {Step 2: Within selected quantile $q$};
+% ════════════════════════════════════════════
+% LEFT COLUMN: Without adjustment
+% ════════════════════════════════════════════
+\node[font=\small\bfseries, red!70!black] at (2.2, 5.2) {Without adjustment};
 
-% Show susceptible vs resistant
-\draw[thick] (3, -0.6) rectangle (8, 0.4);
-\fill[green!30] (3, -0.6) rectangle (5.5, 0.4);
-\fill[red!15] (5.5, -0.6) rectangle (8, 0.4);
-\node[font=\small] at (4.25, 0.1) {Susceptible};
-\node[font=\small] at (6.75, 0.1) {Resistant};
-\node[font=\footnotesize] at (4.25, -0.35) {$\mathcal{S}_q = \overline{tI2}_q \cdot (1 + \overline{V6}_q)$};
-\node[font=\footnotesize] at (6.75, -0.35) {$1 - \mathcal{S}_q$};
+% Step 1: probability used
+\node[stepbox] (L1) at (2.2, 4.3) {Use raw $p = p_0$};
 
-% Step 3: Formula
-\node[font=\small\bfseries, anchor=west] at (-0.3, -1.3) {Step 3: Adjust $p_0$};
-\node[draw, rounded corners, fill=yellow!20, font=\small, text width=9cm, align=center] at (5.5, -2.4) {
-    $p_0^{\ast}(q) = p_0 \;\cdot\; \underbrace{\dfrac{1}{\mathcal{S}_q}}_{\substack{\text{compensate for}\\\text{non-susceptible yards}}} \;\cdot\; \underbrace{\dfrac{1}{\mathcal{P}_q}}_{\substack{\text{compensate for}\\\text{quantile size}}}$
-};
+% Step 2: draw
+\node[stepbox] (L2) at (2.2, 3.2) {Draw Binom($n,\; p_0$) in $\mathcal{P}_q N$ yards};
+\node[font=\scriptsize, gray!60!black, anchor=west] at (0.1, 2.7) {$E = \mathcal{P}_q \cdot N \cdot n \cdot p_0$};
+
+% Step 3: zero
+\node[stepbox] (L3) at (2.2, 1.9) {Zero non-susceptible yards};
+\node[font=\scriptsize, gray!60!black, anchor=west] at (0.1, 1.4) {$E \approx \mathcal{P}_q \cdot \mathcal{S}_q \cdot N \cdot n \cdot p_0$};
+
+% Result
+\node[resultbad] (LR) at (2.2, 0.4) {$\mathcal{P}_q \mathcal{S}_q \cdot p_0 N n \;\;\ll\;\; p_0 N n$ \quad\textcolor{red!70!black}{\ding{55}}};
+
+\draw[arrow] (L1) -- (L2);
+\draw[arrow] (L2) -- (L3);
+\draw[arrow] (L3) -- (LR);
+
+% ════════════════════════════════════════════
+% RIGHT COLUMN: With adjustment
+% ════════════════════════════════════════════
+\node[font=\small\bfseries, green!50!black] at (8.8, 5.2) {With adjustment};
+
+% Step 1: probability used
+\node[stepbox] (R1) at (8.8, 4.3) {Use $p = p_0^{\ast} = \dfrac{p_0}{\mathcal{S}_q \,\mathcal{P}_q}$};
+
+% Step 2: draw
+\node[stepbox] (R2) at (8.8, 3.2) {Draw Binom($n,\; p_0^{\ast}$) in $\mathcal{P}_q N$ yards};
+\node[font=\scriptsize, gray!60!black, anchor=east] at (11.5, 2.7) {$E = \mathcal{P}_q \cdot N \cdot n \cdot p_0^{\ast}$};
+
+% Step 3: zero
+\node[stepbox] (R3) at (8.8, 1.9) {Zero non-susceptible yards};
+\node[font=\scriptsize, gray!60!black, anchor=east] at (11.5, 1.4) {$E = \mathcal{P}_q \cdot \mathcal{S}_q \cdot N \cdot n \cdot p_0^{\ast}$};
+
+% Result
+\node[resultgood] (RR) at (8.8, 0.4) {$\mathcal{P}_q \mathcal{S}_q \cdot \dfrac{p_0}{\mathcal{S}_q \mathcal{P}_q} \cdot N n \;=\; p_0 N n$ \quad\textcolor{green!50!black}{\ding{51}}};
+
+\draw[arrow] (R1) -- (R2);
+\draw[arrow] (R2) -- (R3);
+\draw[arrow] (R3) -- (RR);
+
+% ── Divider ──
+\draw[dashed, gray] (5.5, 5.1) -- (5.5, -0.1);
 
 \end{tikzpicture}
-\caption{\textbf{Schematic of the susceptibility adjustment for initial infection probability}. The landscape of hop yards is divided into five out-degree centrality quantiles (Step 1). In each simulation scenario, initial infections are placed exclusively in one quantile (Step 2), where only a fraction $\mathcal{S}_q$ of yards are susceptible to the initial pathogen strain. The raw initial probability $p_0$ is scaled up by $1/\mathcal{S}_q$ and $1/\mathcal{P}_q$ so that the expected landscape-wide number of flag shoots matches the target $p_0$ (Step 3).}
+\caption{\textbf{Effect of the susceptibility adjustment on expected flag shoot counts}. The landscape is divided into five out-degree centrality quantiles, and initial infections are placed in a single selected quantile $q$ containing a fraction $\mathcal{P}_q$ of yards. \textit{Left}: using the raw probability $p_0$ directly produces far fewer flag shoots than the landscape-wide target because only $\mathcal{P}_q$ of yards participate and only a fraction $\mathcal{S}_q$ of those are susceptible. \textit{Right}: the adjusted probability $p_0^{\ast}(q) = p_0 / (\mathcal{S}_q \cdot \mathcal{P}_q)$ inflates the draw to compensate for both reductions, so that the expected surviving flag shoot count equals the target $p_0 \cdot N \cdot n$.}
 \label{fig:susceptibility_adjustment}
 \end{figure}
 
