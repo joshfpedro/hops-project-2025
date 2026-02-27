@@ -28,4 +28,7 @@ env/
 
 # OS specific files
 .DS_Store
-Thumbs.db 
+Thumbs.db
+
+# Ignore everything in the paper folder
+paper/
